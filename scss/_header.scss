@@ -1,0 +1,33 @@
+header {
+  .top-header {
+    background-color: #e3e3e3;
+    img {
+      position: relative;
+      top: 2px;
+    }
+    .slogan {
+      font-size: 14px;
+      margin-bottom: 0.1rem;
+    }
+  }
+  .bottom-header {
+    background-color: #00386e;
+    .nav-tabs {
+      border: 0;
+      .nav-item.show .nav-link, .nav-link.active{
+        background-color: transparent;
+        border: none;
+        color: #fc9c12;
+      }
+      .nav-link {
+        color: #ececec;
+        &:hover{
+          border: none;
+        }
+        &:focus{
+          border: none;
+        }
+      }
+    }
+  }
+}

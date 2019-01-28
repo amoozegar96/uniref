@@ -1,3 +1,45 @@
+header .top-header {
+  background-color: #e3e3e3; }
+  header .top-header img {
+    position: relative;
+    top: 2px; }
+  header .top-header .slogan {
+    font-size: 14px;
+    margin-bottom: 0.1rem; }
+header .bottom-header {
+  background-color: #00386e; }
+  header .bottom-header .nav-tabs {
+    border: 0; }
+    header .bottom-header .nav-tabs .nav-item.show .nav-link, header .bottom-header .nav-tabs .nav-link.active {
+      background-color: transparent;
+      border: none;
+      color: #fc9c12; }
+    header .bottom-header .nav-tabs .nav-link {
+      color: #ececec; }
+      header .bottom-header .nav-tabs .nav-link:hover {
+        border: none; }
+      header .bottom-header .nav-tabs .nav-link:focus {
+        border: none; }
 
+@font-face {
+  font-family: IranSans;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/IRANSansWeb.woff2) format("woff2"); }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: right; }
+
+body {
+  font-family: IRANSans, serif, sans-serif, cursive, fantasy, monospace, serif, sans-serif, cursive, fantasy, monospace; }
+
+a, a:active, a:hover {
+  text-decoration: none;
+  color: inherit; }
+
+ul li {
+  list-style: none; }
 
 /*# sourceMappingURL=main.css.map */
