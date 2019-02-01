@@ -1,4 +1,5 @@
 header {
+  height: 155px;
   .top-header {
     background-color: #e3e3e3;
     img {
@@ -13,21 +14,67 @@ header {
   .bottom-header {
     background-color: #00386e;
     .nav-tabs {
-      border: 0;
-      .nav-item.show .nav-link, .nav-link.active{
+      border-color: transparent;
+      .nav-item.show .nav-link, .nav-link.active {
         background-color: transparent;
-        border: none;
+        border-color: transparent;
         color: #fc9c12;
       }
-      .nav-link {
-        color: #ececec;
-        &:hover{
-          border-color: transparent;
+      .nav-item {
+        .nav-link {
+          color: #ececec;
+          &:hover {
+            border-color: transparent;
+            color: #fc9c12;
+          }
+          &:focus {
+            border-color: transparent;
+            color: #fc9c12;
+          }
+          &.dropdown-toggle {
+            &:after {
+              top: 6px;
+              position: relative;
+              right: 5px;
+            }
+          }
         }
-        &:focus{
-          border: none;
+        &.dropdown{
+          &:hover {
+            .dropdown-menu {
+              display: block;
+              transform: translate3d(40px, 42px, 0px) !important;
+              width: 800px !important;
+              left: auto !important;
+              padding:20px 5px !important;
+              top: 0!important;
+              margin: 0px auto;
+              border-radius: 6px;
+              border: 6px solid #00386e;
+              .list{
+                &:last-child{
+                  border: 0;
+                }
+                display: inline-block;
+                border-left:1px solid #cecece;
+                .dropdown-item{
+                  font-size: 14px;
+                }
+              }
+            }
+          }
         }
       }
     }
   }
+}
+
+.FixMenuLarge {
+  width: 100% !important;
+  position: fixed !important;
+  right: 0 !important;
+  top: -90px !important;
+  z-index: 999;
+  background-position: center;
+  background-repeat-y: no-repeat;
 }
