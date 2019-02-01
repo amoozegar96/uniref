@@ -1,31 +1,106 @@
-header .top-header {
-  background-color: #e3e3e3; }
-  header .top-header img {
-    position: relative;
-    top: 2px; }
-  header .top-header .slogan {
-    font-size: 14px;
-    margin-bottom: 0.1rem; }
-header .bottom-header {
-  background-color: #00386e; }
-  header .bottom-header .nav-tabs {
-    border: 0; }
-    header .bottom-header .nav-tabs .nav-item.show .nav-link, header .bottom-header .nav-tabs .nav-link.active {
-      background-color: transparent;
-      border: none;
-      color: #fc9c12; }
-    header .bottom-header .nav-tabs .nav-link {
-      color: #ececec; }
-      header .bottom-header .nav-tabs .nav-link:hover {
-        border-color: transparent; }
-      header .bottom-header .nav-tabs .nav-link:focus {
-        border: none; }
+header {
+  height: 155px; }
+  header .top-header {
+    background-color: #e3e3e3; }
+    header .top-header img {
+      position: relative;
+      top: 2px; }
+    header .top-header .slogan {
+      font-size: 14px;
+      margin-bottom: 0.1rem; }
+  header .bottom-header {
+    background-color: #00386e; }
+    header .bottom-header .nav-tabs {
+      border-color: transparent; }
+      header .bottom-header .nav-tabs .nav-item.show .nav-link, header .bottom-header .nav-tabs .nav-link.active {
+        background-color: transparent;
+        border-color: transparent;
+        color: #fc9c12; }
+      header .bottom-header .nav-tabs .nav-item .nav-link {
+        color: #ececec; }
+        header .bottom-header .nav-tabs .nav-item .nav-link:hover {
+          border-color: transparent;
+          color: #fc9c12; }
+        header .bottom-header .nav-tabs .nav-item .nav-link:focus {
+          border-color: transparent;
+          color: #fc9c12; }
+        header .bottom-header .nav-tabs .nav-item .nav-link.dropdown-toggle:after {
+          top: 6px;
+          position: relative;
+          right: 5px; }
+      header .bottom-header .nav-tabs .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        transform: translate3d(40px, 42px, 0px) !important;
+        width: 800px !important;
+        left: auto !important;
+        padding: 20px 5px !important;
+        top: 0 !important;
+        margin: 0px auto;
+        border-radius: 6px;
+        border: 6px solid #00386e; }
+        header .bottom-header .nav-tabs .nav-item.dropdown:hover .dropdown-menu .list {
+          display: inline-block;
+          border-left: 1px solid #cecece; }
+          header .bottom-header .nav-tabs .nav-item.dropdown:hover .dropdown-menu .list:last-child {
+            border: 0; }
+          header .bottom-header .nav-tabs .nav-item.dropdown:hover .dropdown-menu .list .dropdown-item {
+            font-size: 14px; }
+
+.FixMenuLarge {
+  width: 100% !important;
+  position: fixed !important;
+  right: 0 !important;
+  top: -90px !important;
+  z-index: 999;
+  background-position: center;
+  background-repeat-y: no-repeat; }
+
+.custom-card .custom-card-content .custom-card-title {
+  font-size: 16px; }
+.custom-card .custom-card-content .custom-card-sub-title {
+  font-size: 14px; }
+.custom-card .custom-card-icon span:before {
+  font-size: 60px;
+  background: -webkit-linear-gradient(bottom, #00386e 0%, #2dc1bc 81%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+.carousel {
+  height: 600px; }
 
 @font-face {
-  font-family: IranSans;
+  font-family: "IRANSans";
   font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/IRANSansWeb.woff2) format("woff2"); }
+  font-weight: normal;
+  src: url("../fonts/IRANSansWeb.woff") format("woff"); }
+@font-face {
+  font-family: "IRANSans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/IRANSansWeb_Light.woff") format("woff"); }
+@font-face {
+  font-family: "IRANSans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/IRANSansWeb_Medium.woff") format("woff"); }
+@font-face {
+  font-family: "IRANSans";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/IRANSansWeb_Bold.woff") format("woff"); }
+@font-face {
+  font-family: "icon_font";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/icon_font.woff") format("woff"); }
+[class*="font-weight-"] {
+  font-family: IranSans, serif, sans-serif, cursive, fantasy, monospace, serif, sans-serif, cursive, fantasy, monospace; }
+
+[class^="icon-font-"]:before,
+[class^="icon-font-"]:after {
+  font-family: icon_font, serif, sans-serif, cursive, fantasy, monospace, serif, sans-serif, cursive, fantasy, monospace;
+  font-size: 20px; }
+
 * {
   margin: 0;
   padding: 0;
@@ -41,5 +116,47 @@ a, a:active, a:hover {
 
 ul li {
   list-style: none; }
+
+.color-mine-shaft {
+  color: #232323; }
+
+.color-dove-gray {
+  color: #6c6c6c; }
+
+.color-surfie-green {
+  color: #10698a; }
+
+.color-silver {
+  color: #bbbbbb; }
+
+.m-top {
+  margin-top: 2.5rem; }
+
+.m-bottom {
+  margin-bottom: 2.5rem; }
+
+.p-top {
+  padding-top: 2.5rem; }
+
+.p-bottom {
+  padding-bottom: 2.5rem; }
+
+.icon-font-earth:before {
+  content: "\f100"; }
+
+.icon-font-writing:before {
+  content: "\f101"; }
+
+.icon-font-microphone:before {
+  content: "\f102"; }
+
+.icon-font-academy:before {
+  content: "\f103"; }
+
+.icon-font-note-writing:before {
+  content: "\f104"; }
+
+.icon-font-journal:before {
+  content: "\f105"; }
 
 /*# sourceMappingURL=main.css.map */
