@@ -1,0 +1,12 @@
+.custom-card{
+  .custom-card-icon{
+    span{
+      &:before{
+        font-size: 60px;
+        background: $linear-gradient-midnight-blue-to-turquoise;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}

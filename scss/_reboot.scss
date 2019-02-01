@@ -1,10 +1,18 @@
-@font-face {
-  font-family: IranSans;
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/IRANSansWeb.woff2) format('woff2')
+@include font-face(IRANSans, '../fonts/IRANSansWeb', normal, normal, woff);
+@include font-face(IRANSans, '../fonts/IRANSansWeb_Light', 300, normal, woff);
+@include font-face(IRANSans, '../fonts/IRANSansWeb_Medium', 500, normal, woff);
+@include font-face(IRANSans, '../fonts/IRANSansWeb_Bold', bold, normal, woff);
+@include font-face(icon_font, '../fonts/icon_font', normal, normal, woff);
+
+[class*="font-weight-"] {
+  font-family: IranSans, $DefaultFonts;
 }
 
+[class^="icon-font-"]:before,
+[class^="icon-font-"]:after {
+  font-family: icon_font, $DefaultFonts;
+  font-size: 20px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -24,3 +32,51 @@ a, a:active, a:hover {
 ul li {
   list-style: none
 }
+
+//==========================================
+//colors
+//==========================================
+.color-mine-shaft {
+  color: $color-mine-shaft;
+}
+
+.color-dove-gray {
+  color: $color-dove-gray;
+}
+
+.color-surfie-green {
+  color: $color-surfie-green;
+}
+
+.color-silver {
+  color: $color-silver;
+}
+
+//==========================================
+//margin and padding
+//==========================================
+.m-top {
+  margin-top: $margin-and-padding-size;
+}
+
+.m-bottom {
+  margin-bottom: $margin-and-padding-size;
+}
+
+.p-top {
+  padding-top: $margin-and-padding-size;
+}
+
+.p-bottom {
+  padding-bottom: $margin-and-padding-size;
+}
+
+//==========================================
+//icon fonts
+//==========================================
+.icon-font-earth:before { content: "\f100"; }
+.icon-font-writing:before { content: "\f101"; }
+.icon-font-microphone:before { content: "\f102"; }
+.icon-font-academy:before { content: "\f103"; }
+.icon-font-note-writing:before { content: "\f104"; }
+.icon-font-journal:before { content: "\f105"; }
