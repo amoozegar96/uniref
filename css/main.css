@@ -17,7 +17,7 @@ header .bottom-header {
     header .bottom-header .nav-tabs .nav-link {
       color: #ececec; }
       header .bottom-header .nav-tabs .nav-link:hover {
-        border: none; }
+        border-color: transparent; }
       header .bottom-header .nav-tabs .nav-link:focus {
         border: none; }
 

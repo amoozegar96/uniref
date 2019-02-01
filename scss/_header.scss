@@ -22,7 +22,7 @@ header {
       .nav-link {
         color: #ececec;
         &:hover{
-          border: none;
+          border-color: transparent;
         }
         &:focus{
           border: none;
