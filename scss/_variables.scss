@@ -2,10 +2,16 @@ $DefaultFonts: serif, sans-serif, cursive, fantasy, monospace, serif, sans-serif
 //===============================================
 //colors
 //===============================================
+$color-white: #fff;
+$color-black: #000;
+$color-cream-can: #f2bb4e;
 $color-mine-shaft: #232323;
 $color-dove-gray: #6c6c6c;
 $color-silver: #bbbbbb;
 $color-surfie-green: #10698a;
+$color-Gainsboro: #e3e3e3;
+$color-Prussian-Blue: #00386e;
+$background-color-before-footer: rgba(0, 0, 0, 0.78);
 $linear-gradient-midnight-blue-to-turquoise: -webkit-linear-gradient(bottom, #00386e 0%, #2dc1bc 81%);
 //===============================================
 //numbers
@@ -17,3 +23,6 @@ $xs: 576px;
 $margin-and-padding-size: 2.5rem;
 $f-16: 16px;
 $f-14: 14px;
+$f-12: 12px;
+$f-10: 10px;
+$f-26: 26px;

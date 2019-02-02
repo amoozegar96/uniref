@@ -28,7 +28,9 @@ a, a:active, a:hover {
   text-decoration: none;
   color: inherit
 }
-
+a:hover{
+  color: $color-cream-can !important;
+}
 ul li {
   list-style: none
 }
@@ -50,6 +52,16 @@ ul li {
 
 .color-silver {
   color: $color-silver;
+}
+
+.color-cream-can {
+  color: $color-cream-can;
+}
+//==========================================
+//background colors
+//==========================================
+.bg-black{
+  background-color: $color-black;
 }
 
 //==========================================
@@ -80,3 +92,28 @@ ul li {
 .icon-font-academy:before { content: "\f103"; }
 .icon-font-note-writing:before { content: "\f104"; }
 .icon-font-journal:before { content: "\f105"; }
+
+//==========================================
+//z-index
+//==========================================
+.z-index-1{
+  z-index: 1;
+}
+//==========================================
+//font size
+//==========================================
+.font-size-12{
+  font-size: $f-12;
+}
+.font-size-16{
+  font-size: $f-16;
+}
+//==========================================
+//flex
+//==========================================
+.flex-2{
+  flex:2;
+}
+.flex-100{
+  flex:100;
+}

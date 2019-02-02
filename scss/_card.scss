@@ -9,12 +9,48 @@
   }
   .custom-card-icon{
     span{
+      line-height: 0.8;
       &:before{
-        font-size: 60px;
+        font-size: 50px;
         background: $linear-gradient-midnight-blue-to-turquoise;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
+    }
+  }
+  @include media-query("(max-width:576px) and (min-width:480px)"){
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  &.card-md{
+    @include media-query("(max-width:992px)"){
+      .custom-card-title{
+        font-size: $f-12;
+      }
+      .custom-card-sub-title{
+        font-size: $f-10;
+      }
+    }
+  }
+  &.card-sm{
+    @include media-query("(max-width:767px)"){
+      flex-wrap:wrap;
+      .custom-card-title{
+        font-size: $f-14;
+      }
+      .custom-card-sub-title{
+        font-size: $f-12;
+      }
+    }
+  }
+  &.card-xs{
+
+    @include media-query("(max-width:480px)"){
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+      flex-wrap:wrap;
     }
   }
 }
