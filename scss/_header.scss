@@ -1,7 +1,7 @@
 header {
   height: 155px;
   .top-header {
-    background-color: #e3e3e3;
+    background-color: $color-Gainsboro;
     img {
       position: relative;
       top: 2px;
@@ -12,7 +12,7 @@ header {
     }
   }
   .bottom-header {
-    background-color: #00386e;
+    background-color: $color-Prussian-Blue;
     .nav-tabs {
       border-color: transparent;
       .nav-item.show .nav-link, .nav-link.active {
@@ -21,6 +21,9 @@ header {
         color: #fc9c12;
       }
       .nav-item {
+          &.position-absolute{
+            left: 0;
+        }
         .nav-link {
           color: #ececec;
           &:hover {
@@ -39,25 +42,25 @@ header {
             }
           }
         }
-        &.dropdown{
+        &.dropdown {
           &:hover {
             .dropdown-menu {
               display: block;
               transform: translate3d(40px, 42px, 0px) !important;
               width: 800px !important;
               left: auto !important;
-              padding:20px 5px !important;
-              top: 0!important;
+              padding: 20px 5px !important;
+              top: 0 !important;
               margin: 0px auto;
               border-radius: 6px;
-              border: 6px solid #00386e;
-              .list{
-                &:last-child{
+              border: 6px solid $color-Prussian-Blue;
+              .list {
+                &:last-child {
                   border: 0;
                 }
                 display: inline-block;
-                border-left:1px solid #cecece;
-                .dropdown-item{
+                border-left: 1px solid #cecece;
+                .dropdown-item {
                   font-size: 14px;
                 }
               }
@@ -67,14 +70,69 @@ header {
       }
     }
   }
+  .fix-menu-large {
+    width: 100% !important;
+    position: fixed !important;
+    right: 0 !important;
+    top: -90px !important;
+    z-index: 999;
+    background-position: center;
+    background-repeat-y: no-repeat;
+  }
+  @include media-query(LB) {
+    height: 60px;
+  }
+  .header-small {
+    height: 60px;
+    top: 0;
+    right: 0;
+    z-index: 20;
+    background-color: $color-Gainsboro;
+    .icon-search-small {
+      left: 10px;
+      height: 21px;
+      line-height: 1.6;
+    }
+    i{
+      color: $color-Prussian-Blue;
+    }
+  }
+  .menu-items {
+    z-index: 1003;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    background-color: #272727;
+    transition: all .5s;
+    overflow: scroll;
+    .fas.float-left {
+      top: 6px;
+    }
+    .close-menu > .far {
+      font-size: $f-26;
+    }
+    ul {
+      float: right;
+      width: 100%;
+      padding: 15px;
+     &.menu-down{
+       display: none;
+     }
+    }
+  }
 }
 
-.FixMenuLarge {
-  width: 100% !important;
-  position: fixed !important;
-  right: 0 !important;
-  top: -90px !important;
-  z-index: 999;
-  background-position: center;
-  background-repeat-y: no-repeat;
+//==========================================
+//BlackPage
+//==========================================
+.black-page {
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  //cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAABGdBT…owMBY2mDAAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC), default;
+  background-color: rgba(0, 0, 0, .68);
+  z-index: 20;
+  position: absolute;
+  display: none;
 }

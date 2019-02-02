@@ -32,12 +32,7 @@
 // =============================================================================
 @mixin media-query($canvas) {
 
-  @if $canvas == L {
-    @media only screen and (min-width: $L) {
-      @content
-    }
-  }
-  @if $canvas == LB {
+  @if $canvas == LM {
     @media only screen and (min-width: $M) {
       @content
     }
@@ -45,7 +40,16 @@
     @media only screen and (max-width: $M) {
       @content
     }
-  } @else if $canvas == S {
+  }
+  @elseif $canvas == L {
+    @media only screen and (min-width: $L) {
+      @content
+    }
+  }@elseif $canvas == LB {
+    @media only screen and (max-width: $L) {
+      @content
+    }
+  }@else if $canvas == S {
     @media only screen and (max-width: $S) {
       @content
     }
