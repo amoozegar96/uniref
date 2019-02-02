@@ -3,7 +3,6 @@
 // =============================================================================
 @mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
   $src: null;
-
   $extmods: (
           eot: "?",
           svg: "#" + str-replace($name, " ", "_")
@@ -27,3 +26,48 @@
     src: $src;
   }
 }
+
+// =============================================================================
+// Media Query
+// =============================================================================
+@mixin media-query($canvas) {
+
+  @if $canvas == L {
+    @media only screen and (min-width: $L) {
+      @content
+    }
+  }
+  @if $canvas == LB {
+    @media only screen and (min-width: $M) {
+      @content
+    }
+  } @else if $canvas == M {
+    @media only screen and (max-width: $M) {
+      @content
+    }
+  } @else if $canvas == S {
+    @media only screen and (max-width: $S) {
+      @content
+    }
+  } @else if $canvas == xs {
+    @media only screen and (max-width: $xs) {
+      @content
+    }
+  } @else{
+    @media only screen and #{$canvas} {
+      @content
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
