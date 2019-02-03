@@ -7,12 +7,15 @@
 [class*="font-weight-"] {
   font-family: IranSans, $DefaultFonts;
 }
-
+.font-weight-normal {
+  font-weight: 500!important;
+}
 [class^="icon-font-"]:before,
 [class^="icon-font-"]:after {
   font-family: icon_font, $DefaultFonts;
   font-size: 20px;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -28,9 +31,11 @@ a, a:active, a:hover {
   text-decoration: none;
   color: inherit
 }
-a:hover{
+
+a:hover {
   color: $color-cream-can !important;
 }
+
 ul li {
   list-style: none
 }
@@ -38,8 +43,24 @@ ul li {
 //==========================================
 //colors
 //==========================================
+.color-black{
+  color: $color-black;
+}
+
 .color-mine-shaft {
   color: $color-mine-shaft;
+}
+
+.color-mine-shaft-2 {
+  color: $color-mine-shaft-2;
+}
+
+.color-mine-shaft-bright {
+  color: $color-mine-shaft-bright;
+}
+
+.color-mine-shaft-bright-2 {
+  color: $color-mine-shaft-bright-2;
 }
 
 .color-dove-gray {
@@ -50,6 +71,10 @@ ul li {
   color: $color-surfie-green;
 }
 
+.color-ming {
+  color: $color-ming;
+}
+
 .color-silver {
   color: $color-silver;
 }
@@ -57,11 +82,24 @@ ul li {
 .color-cream-can {
   color: $color-cream-can;
 }
+
+.color-tree-poppy {
+  color: $color-tree-poppy;
+}
+
+.color-pussian-blue {
+  color: $color-Prussian-Blue;
+}
+
 //==========================================
 //background colors
 //==========================================
-.bg-black{
+.bg-black {
   background-color: $color-black;
+}
+
+.bg-black-tree-poppy {
+  background-color: $color-tree-poppy;
 }
 
 //==========================================
@@ -86,43 +124,73 @@ ul li {
 //==========================================
 //icon fonts
 //==========================================
-.icon-font-earth:before { content: "\f100"; }
-.icon-font-writing:before { content: "\f101"; }
-.icon-font-microphone:before { content: "\f102"; }
-.icon-font-academy:before { content: "\f103"; }
-.icon-font-note-writing:before { content: "\f104"; }
-.icon-font-journal:before { content: "\f105"; }
+.icon-font-earth:before {
+  content: "\f100";
+}
+
+.icon-font-writing:before {
+  content: "\f101";
+}
+
+.icon-font-microphone:before {
+  content: "\f102";
+}
+
+.icon-font-academy:before {
+  content: "\f103";
+}
+
+.icon-font-note-writing:before {
+  content: "\f104";
+}
+
+.icon-font-journal:before {
+  content: "\f105";
+}
 
 //==========================================
 //z-index
 //==========================================
-.z-index-1{
+.z-index-1 {
   z-index: 1;
 }
+
 //==========================================
 //font size
 //==========================================
-.font-size-12{
+.font-size-10 {
+  font-size: $f-10;
+}
+
+.font-size-12 {
   font-size: $f-12;
 }
-.font-size-16{
+
+.font-size-14 {
+  font-size: $f-14;
+}
+
+.font-size-16 {
   font-size: $f-16;
 }
+
 //==========================================
 //flex
 //==========================================
-.flex-2{
-  flex:2;
+.flex-2 {
+  flex: 2;
 }
-.flex-100{
-  flex:100;
+
+.flex-100 {
+  flex: 100;
 }
+
 //==========================================
 //container
 //==========================================
 @include media-query("(min-width: 1200px)"){
   .container.custom-container{
-    max-width: 1920px;
-    width: 95%;
+    max-width: 1550px;
+    width: 90%;
   }
 }

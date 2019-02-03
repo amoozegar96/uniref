@@ -1,0 +1,92 @@
+.gallery {
+  background: #{$color-surfie-green} url("../images/gallery-pattern.png") center no-repeat;
+  background-size: cover;
+  @include media-query("(max-width: 1200px)") {
+    .container{
+
+      max-width: 100% !important;
+    }
+  }
+  .gallery-sidebar {
+    border-radius: 5px;
+    padding-bottom: $f-10;
+    @include media-query("(min-width: 1200px)") {
+      padding-bottom: 60px;
+    }
+    .gallery-sidebar-title {
+      .gallery-sidebar-title-icon {
+        span {
+          &:before {
+            font-size: 17px;
+          }
+        }
+      }
+      .gallery-sidebar-title-content {
+        border-bottom: 1px solid #{$color-mine-shaft-bright};
+        h6 {
+          margin-bottom: 2px;
+        }
+      }
+    }
+    .gallery-sidebar-content {
+      li {
+        margin: 1px 0;
+        cursor: pointer;
+
+        @include media-query("(max-width: 1200px)") {
+          width: auto !important;
+          padding: 0 20px;
+        }
+        &.active {
+          margin: 0;
+          background: #{$color-surfie-green} url("../images/gallery-pattern.png") center no-repeat;
+          border: 1px solid #{$color-black-32};
+
+          @include media-query("(min-width: 1200px)") {
+            border-left: none;
+          }
+          h6 {
+            color: $color-mine-shaft-dark;
+          }
+        }
+        &:hover{
+          h6{
+            color: $color-mine-shaft-dark;
+          }
+        }
+      }
+    }
+  }
+  .item-gallery {
+    @include media-query("(min-width: 400px) and (max-width:576px)") {
+      -ms-flex: 0 0 33.333333% !important;
+      flex: 0 0 33.333333% !important;
+      max-width: 33.333333% !important;
+    }
+    @include media-query("(min-width: 1200px)") {
+      padding: 45px 15px;
+    }
+    .item-gallery-image {
+      max-height: 120px;
+      height: 8rem;
+      @include media-query("(min-width: 576px) and (max-width:767px)") {
+        max-height: 200px;
+      }
+      @include media-query("(min-width: 400px) and (max-width:575px)") {
+        max-height: 200px;
+        height: 8rem;
+      }
+
+      @include media-query("(max-width:399px)") {
+        max-height: 300px;
+      }
+    }
+    .item-gallery-content{
+      a{
+        &:hover{
+          color: $color-surfie-green !important;
+        }
+      }
+    }
+  }
+}
