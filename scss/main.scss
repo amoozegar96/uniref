@@ -3,4 +3,40 @@
   @include media-query (M) {
     height: 50vw;
   }
+  .description-slider {
+    top: 40%;
+    h1 {
+      width: 700px;
+      left: 0;
+      right: 0;
+      font-size: 18px;
+      line-height: 2;
+      span {
+        margin: 5px auto;
+        background: rgba(63, 63, 63, 0.65);
+        padding: 0 15px;
+        display: inline-block;
+      }
+      @include media-query (M) {
+        width: 80%;
+      }
+      @include media-query ('(max-width:550px)') {
+        font-size: 10px;
+      }
+    }
+    @include media-query (M) {
+      top: 20%;
+    }
+    @include media-query ('(max-width:450px)') {
+      top: 0;
+    }
+  }
+}
+
+.science-production {
+  background-color: #f8f8f8;
+  h6{
+    line-height: 1.9;
+
+  }
 }
