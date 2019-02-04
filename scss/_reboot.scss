@@ -7,9 +7,11 @@
 [class*="font-weight-"] {
   font-family: IranSans, $DefaultFonts;
 }
+
 .font-weight-normal {
-  font-weight: 500!important;
+  font-weight: 500 !important;
 }
+
 [class^="icon-font-"]:before,
 [class^="icon-font-"]:after {
   font-family: icon_font, $DefaultFonts;
@@ -43,7 +45,7 @@ ul li {
 //==========================================
 //colors
 //==========================================
-.color-black{
+.color-black {
   color: $color-black;
 }
 
@@ -163,6 +165,15 @@ ul li {
   z-index: 1;
 }
 
+
+//==========================================
+//btns
+//==========================================
+.btn-black{
+  background-color: $color-black;
+  color: $color-white;
+  padding: 2px 16px;
+}
 //==========================================
 //font size
 //==========================================
@@ -196,8 +207,8 @@ ul li {
 //==========================================
 //container
 //==========================================
-@include media-query("(min-width: 1200px)"){
-  .container.custom-container{
+@include media-query("(min-width: 1200px)") {
+  .container.custom-container {
     max-width: 1550px;
     width: 90%;
   }
@@ -214,109 +225,79 @@ ul li {
   bottom: 0;
   background-color: $color-white;
   z-index: 999;
-
-}
-#loading{
-  background-color: $color-Prussian-Blue;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  margin-top: 0;
-  top: 0;
-}
-#loading-center{
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-#loading-center-absolute {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 200px;
-  width: 200px;
-  margin-top: -100px;
-  margin-left: -100px;
-
-}
-.object{
-  -moz-border-radius: 50% 50% 50% 50%;
-  -webkit-border-radius: 50% 50% 50% 50%;
-  border-radius: 50% 50% 50% 50%;
-  position: absolute;
-  border-left: 5px solid $color-Prussian-Blue;
-  border-right: 5px solid $color-Prussian-Blue;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  -webkit-animation: animate 1.5s infinite;
-  animation: animate 1.5s infinite;
-}
-
-#object_one{
-  left: 75px;
-  top: 75px;
-  width: 50px;
-  height: 50px;
-}
-
-#object_two{
-  left: 65px;
-  top: 65px;
-  width: 70px;
-  height: 70px;
-  -webkit-animation-delay: 0.1s;
-  animation-delay: 0.1s;
-}
-
-#object_three{
-  left: 55px;
-  top: 55px;
-  width: 90px;
-  height: 90px;
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
-}
-#object_four{
-  left: 45px;
-  top: 45px;
-  width: 110px;
-  height: 110px;
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
+  .loading {
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    > div {
+      float: left;
+      width: 18px;
+      height: 0;
+      margin: 10px 1px 10px 1px;
+      background-color: $color-Prussian-Blue;
+      -webkit-transform-origin: bottom center;
+      -webkit-animation: loading-page 1.5s ease-in-out infinite;
+      animation: loading-page 1.5s ease-in-out infinite;
+    }
+    .shaft1 {
+      -webkit-animation-delay: 0.1s;
+    }
+    .shaft2 {
+      -webkit-animation-delay: 0.2s;
+    }
+    .shaft3 {
+      -webkit-animation-delay: 0.3s;
+    }
+    .shaft4 {
+      -webkit-animation-delay: 0.4s;
+    }
+    .shaft5 {
+      -webkit-animation-delay: 0.5s;
+    }
+    .shaft6 {
+      -webkit-animation-delay: 0.6s;
+    }
+    .shaft7 {
+      -webkit-animation-delay: 0.7s;
+    }
+    .shaft8 {
+      -webkit-animation-delay: 0.8s;
+    }
+    .shaft9 {
+      -webkit-animation-delay: 0.9s;
+    }
+    .shaft10 {
+      -webkit-animation-delay: 1s;
+    }
+  }
 
 }
 
-@-webkit-keyframes animate {
-
-
+@-webkit-keyframes loading-page {
+  0% {
+    -webkit-transform: scaleY(0.05);
+    background-color: $color-turquoise;
+    height: 110px;
+  }
   50% {
-    -ms-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
+    -webkit-transform: scaleY(1);
+    background-color: $color-Prussian-Blue;
+    height: 110px;
 
+  }
   100% {
-    -ms-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+    -webkit-transform: scaleY(0.05);
+    background-color: $color-turquoise;
+    height: 110px;
   }
-
 }
 
-@keyframes animate {
-
-  50% {
-    -ms-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-
-  100% {
-    -ms-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-
+.stop-animation {
+  animation-play-state: paused !important;
+  height: 120px !important;
 }

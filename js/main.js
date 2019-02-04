@@ -257,7 +257,7 @@ $(window).on("load", function () {
     setTimeout(function () {
         if ($(".load-page")[0]) {
             $(".load-page").fadeOut();
-            $(".load-page > div *").addClass("StopAnimation");
+            $(".load-page > div *").addClass("stop-animation");
             $("html,body").css({
                 overflow: "",
                 width: ""

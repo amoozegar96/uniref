@@ -1,15 +1,15 @@
-.gauge-bands{
-  height:200px;
+.gauge-bands {
+  height: 200px;
   direction: ltr;
   text-align: left;
-  &#gauge-bands2{
+  &#gauge-bands2 {
     height: 320px;
   }
-  a{
+  a {
     display: none !important;
   }
 }
+
 tspan {
   font-size: 10px;
-  //text-align: right;
 }

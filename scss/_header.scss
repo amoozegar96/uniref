@@ -21,8 +21,8 @@ header {
         color: #fc9c12;
       }
       .nav-item {
-          &.position-absolute{
-            left: 0;
+        &.position-absolute {
+          left: 0;
         }
         .nav-link {
           color: #ececec;
@@ -93,7 +93,7 @@ header {
       height: 21px;
       line-height: 1.6;
     }
-    i{
+    i {
       color: $color-Prussian-Blue;
     }
   }
@@ -115,12 +115,13 @@ header {
       float: right;
       width: 100%;
       padding: 15px;
-     &.menu-down{
-       display: none;
-     }
+      &.menu-down {
+        display: none;
+      }
     }
   }
 }
+
 //==========================================
 //BlackPage
 //==========================================
