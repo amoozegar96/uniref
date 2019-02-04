@@ -252,7 +252,7 @@ var columnTemplate2 = series2.columns.template;
 columnTemplate2.strokeWidth = 2;
 columnTemplate2.strokeOpacity = 1;
 
-
+$(".load-page > div *").show();
 $(window).on("load", function () {
     setTimeout(function () {
         if ($(".load-page")[0]) {
@@ -263,5 +263,5 @@ $(window).on("load", function () {
                 width: ""
             });
         }
-    }, 500)
+    }, 3000)
 });
