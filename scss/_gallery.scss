@@ -18,6 +18,9 @@
         span {
           &:before {
             font-size: 17px;
+            @include media-query("(max-width:1199px)") {
+              font-size: 25px;
+            }
           }
         }
       }
@@ -25,6 +28,10 @@
         border-bottom: 1px solid #{$color-mine-shaft-bright};
         h6 {
           margin-bottom: 2px;
+          @include media-query("(max-width:1199px)") {
+            font-size: $f-16;
+            margin-bottom: 6px;
+          }
         }
       }
     }
@@ -69,6 +76,10 @@
     .item-gallery-image {
       max-height: 120px;
       height: 8rem;
+      img{
+        max-width: 80%;
+        max-height: 90%;
+      }
       @include media-query("(min-width: 576px) and (max-width:767px)") {
         max-height: 200px;
       }
@@ -87,6 +98,13 @@
           color: $color-surfie-green !important;
         }
       }
+    }
+  }
+  @include media-query("(min-width: 400px) and (max-width:576px)") {
+    .grid-sizer {
+      -ms-flex: 0 0 33.333333% !important;
+      flex: 0 0 33.333333% !important;
+      max-width: 33.333333% !important;
     }
   }
 }

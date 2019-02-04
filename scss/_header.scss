@@ -132,6 +132,6 @@ header {
   //cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAABGdBT…owMBY2mDAAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC), default;
   background-color: rgba(0, 0, 0, .68);
   z-index: 20;
-  position: absolute;
+  position: fixed;
   display: none;
 }
