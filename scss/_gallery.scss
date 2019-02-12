@@ -7,14 +7,15 @@
   }
   .btn{
     position: absolute !important;
-    left: 0;
-    right: auto !important;
+    left: auto !important;
+    right: 0 !important;
     top: auto !important;
     bottom: 10px;
     transform: translate(0,0) !important;
 
     @include media-query("(max-width: 1200px)") {
-      left: 10px;
+      left: auto !important;
+      right: 10px !important;
     }
   }
   .gallery-sidebar {
@@ -115,6 +116,19 @@
       -ms-flex: 0 0 33.333333% !important;
       flex: 0 0 33.333333% !important;
       max-width: 33.333333% !important;
+    }
+  }
+}
+.rtl{
+  .gallery {
+    .btn {
+      left: 0 !important;
+      right: auto !important;
+
+      @include media-query("(max-width: 1200px)") {
+        right: auto !important;
+        left: 10px !important;
+      }
     }
   }
 }

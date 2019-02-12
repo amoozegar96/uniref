@@ -1,0 +1,34 @@
+.copy-right {
+  .justify-content-center {
+    > p {
+      margin-left: auto;
+    }
+    > a {
+      margin-right: auto;
+    }
+    @include media-query("(max-width:767px)") {
+      > a, > p {
+        margin: auto;
+      }
+    }
+    @include media-query("(max-width:576px)") {
+      > p {
+        text-align: center;
+      }
+    }
+  }
+}
+.rtl{
+  .copy-right {
+    .justify-content-center {
+      > p {
+        margin-right: auto;
+        margin-left: 0;
+      }
+      > a {
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+  }
+}

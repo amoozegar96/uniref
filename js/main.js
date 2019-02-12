@@ -36,19 +36,29 @@ $(".menu-items ul li div i.fas.fa-plus").click(function () {
     $(this).toggleClass("fa-plus");
     $(this).toggleClass("fa-minus");
 });
-if ($(".gallery .row.d-flex").length) {
-    $(".gallery .row.d-flex").isotope({
-        originLeft: false,
-        itemSelector: '.gallery-isotope',
-        percentPosition: true,
-        filter: $(".gallery-sidebar-content li.active").attr("data-filter"),
-        masonry: {
-            columnWidth: '.grid-sizer'
+
+
+$(window).on('ready load resize change', function () {
+    if ($(".gallery .row.d-flex").length) {
+        var rtl_or_ltr = true;
+        if ($(".gallery .row.d-flex").parents(".rtl").length) {
+            rtl_or_ltr = false;
         }
-    });
-}
+        var option_isotope = {
+            originLeft: rtl_or_ltr,
+            itemSelector: '.gallery-isotope',
+            percentPosition: true,
+            filter: $(".gallery-sidebar-content li.active").attr("data-filter"),
+            masonry: {
+                columnWidth: '.grid-sizer'
+            }
+        };
+        $(".gallery .row.d-flex").isotope(option_isotope);
+        $(".gallery .row.d-flex").isotope('destroy').isotope(option_isotope);
+    }
+});
 $(".gallery-sidebar-content li").click(function () {
-    $(this).addClass("active").siblings().removeClass("active")
+    $(this).addClass("active").siblings().removeClass("active");
     $(".gallery .row.d-flex").isotope({filter: $(this).attr("data-filter")})
 });
 //==================
@@ -269,7 +279,7 @@ if ($("#gauge-bands2").length) {
                     width: ""
                 });
             }
-        }, 3000)
+        }, 1000)
     });
 }
 //==================
@@ -279,6 +289,5 @@ $(function () {
     $('#IranMap .map .province path').click(function () {
         var province = $(this).attr('class');
         window.location.href = $("." + $(this).attr('class') + " a").attr("href");
-
     });
 });
