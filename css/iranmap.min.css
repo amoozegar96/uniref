@@ -1,0 +1,100 @@
+/*
+ * Iran Map - SVG and Responsive.
+ * Free and open source.
+ * Version 1.1.0
+ * By: MohammadReza Pourmohammad.
+ * Email: mohammadrpm@gmail.com
+ * Web: http://mrpm.ir
+ */
+#IranMap {
+    margin-top: 94px;
+}
+
+#IranMap .show-title {
+    display: none;
+    position: absolute;
+    background-color: rgba(51, 51, 51, .5);
+    text-align: center;
+    border-radius: 2px;
+}
+.title-provinces h5{
+color: #636563;
+}
+#IranMap .map {
+    height: 568px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+}
+
+
+#IranMap .map .border path, #IranMap .map .island path {
+    fill: #fff
+}
+
+#IranMap .map .province path {
+    fill: #cccccc;
+    stroke-width: 2px;
+    stroke: #f4f4f4;
+}
+
+#IranMap .map .sea path, #IranMap .map .lake path {
+    fill: #01396e
+}
+
+#IranMap .map .province path:hover, #IranMap .map .island path:hover, #IranMap .map .province path.hover, #IranMap .map .island path.hover {
+    fill: #01396e !important;
+    cursor: pointer;
+}
+
+#IranMap .list span {
+    color: #3e3e44;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translate(0,-50%);
+    pointer-events: none;
+    border-right: 1px solid #d2d2d2;
+    padding-right: 15px;
+    width: 35px;
+}
+
+#IranMap .list li{
+    user-select: none;
+}
+#IranMap .list a {
+    background: #f8f8f8;
+    color: #505050;
+    line-height: 26px;
+    text-decoration: none;
+    padding: 4px 8px 4px 0;
+    border-radius: 6px;
+    box-shadow: 1px 2px 2px 0 #d9d9d9;
+}
+
+#IranMap .list a:hover, #IranMap .list a:hover + span, #IranMap .list a.hover, #IranMap .list a.hover + span {
+    background: #01396e;
+    color:#f2bb4e;
+}
+#IranMap .list .total-articles-province a{
+    background-color: #ededed;
+}
+@media screen and (max-width: 1470px) and (min-width: 1200px) {
+    #IranMap .list li{
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 440px) {
+    #IranMap .list li{
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+@media screen and (max-width: 991px){
+    #IranMap {
+        margin-top: 30px;
+    }
+}
