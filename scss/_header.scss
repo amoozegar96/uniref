@@ -12,7 +12,7 @@ header {
     }
   }
   .bottom-header {
-    background-color: $color-Prussian-Blue;
+    background-color: $color-prussian-blue;
     .nav-tabs {
       border-color: transparent;
       .nav-item.show .nav-link, .nav-link.active {
@@ -53,7 +53,7 @@ header {
               top: 0 !important;
               margin: 0px auto;
               border-radius: 6px;
-              border: 6px solid $color-Prussian-Blue;
+              border: 6px solid $color-prussian-blue;
               .list {
                 &:last-child {
                   border: 0;
@@ -94,7 +94,7 @@ header {
       line-height: 1.6;
     }
     i {
-      color: $color-Prussian-Blue;
+      color: $color-prussian-blue;
     }
   }
   .menu-items {

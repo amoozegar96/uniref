@@ -15,6 +15,7 @@
 [class^="icon-font-"]:before,
 [class^="icon-font-"]:after {
   font-family: icon_font, $DefaultFonts;
+  font-weight: normal;
   font-size: 20px;
 }
 
@@ -41,7 +42,9 @@ a:hover {
 ul li {
   list-style: none
 }
-
+.overflow-hidden{
+  overflow: hidden !important;
+}
 //==========================================
 //colors
 //==========================================
@@ -59,6 +62,10 @@ ul li {
 
 .color-mine-shaft-2 {
   color: $color-mine-shaft-2;
+}
+
+.color-mine-shaft-3 {
+  color: $color-mine-shaft-3;
 }
 
 .color-mine-shaft-bright {
@@ -94,7 +101,7 @@ ul li {
 }
 
 .color-pussian-blue {
-  color: $color-Prussian-Blue;
+  color: $color-prussian-blue;
 }
 
 .color-bahama-blue {
@@ -160,6 +167,34 @@ ul li {
 
 .icon-font-journal:before {
   content: "\f105";
+}
+
+.icon-font-phone:before {
+  content: "\f106";
+}
+
+.icon-font-home:before {
+  content: "\f107";
+}
+
+.icon-font-twitter:before {
+  content: "\f108";
+}
+
+.icon-font-rss:before {
+  content: "\f109";
+}
+
+.icon-font-facebook:before {
+  content: "\f110";
+}
+
+.icon-font-telegram:before {
+  content: "\f111";
+}
+
+.icon-font-instagram:before {
+  content: "\f112";
 }
 
 //==========================================
@@ -244,7 +279,7 @@ ul li {
       width: 18px;
       height: 0;
       margin: 10px 1px 10px 1px;
-      background-color: $color-Prussian-Blue;
+      background-color: $color-prussian-blue;
       -webkit-transform-origin: bottom center;
       -webkit-animation: loading-page 1.5s ease-in-out infinite;
       animation: loading-page 1.5s ease-in-out infinite;
@@ -291,7 +326,7 @@ ul li {
   }
   50% {
     -webkit-transform: scaleY(1);
-    background-color: $color-Prussian-Blue;
+    background-color: $color-prussian-blue;
     height: 110px;
 
   }

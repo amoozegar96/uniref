@@ -283,10 +283,20 @@ $(window).on("load", function () {
     }, 1000)
 });
 //==================
-// map
+// Map
 //==================
 $(function () {
     $('.iran-map .map .province path').click(function () {
         window.location.href = $("." + $(this).attr('class') + " a").attr("href");
     });
 });
+//==================
+// Parallax
+//==================
+$(window).scroll(function(){
+    var self = $(this);
+    var parallax_distance = (self.scrollTop() / 1.5);
+    if(self.scrollTop() > ($("[data-parallax]").offset().top - $("header").outerHeight(true))){
+        $("[data-parallax] .parallax-image").css("background-position-y",parallax_distance + "px");
+    }
+})

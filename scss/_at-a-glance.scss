@@ -1,0 +1,72 @@
+.at-a-glance{
+
+
+  .parallax{
+    height: 341px;
+   .parallax-image{
+     background: $color-prussian-blue center no-repeat;
+     background-size: cover;
+     position: absolute;
+     top: -40%;
+     right: 0;
+     left: 0;
+     bottom: 0;
+   }
+  }
+  .at-a-glance-content{
+    min-height: 240px;
+    top: -156px;
+    > .container{
+      > .row{
+        padding: 0 20px;
+      }
+    }
+    .at-a-glance-content-header{
+      .avatar-university{
+        top: -57px;
+        width: 180px;
+        height: 165px;
+        padding: 12px;
+        border-radius: 2px;
+        box-shadow: -4px 4px 12px 0px rgba(0, 0, 0, 0.11);
+        img{
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+      .at-a-glance-content-header-text{
+        .at-a-glance-content-header-title{
+          font-size: 15px;
+        }
+        h4{
+          &:nth-child(2){
+            padding-top: 5px;
+          }
+        }
+      }
+      .at-a-glance-content-contact-us{
+        .website{
+          margin-right: 28px;
+        }
+        .phone-number,.website{
+          [class^="icon-font-"]:before{
+            font-size: $f-16;
+          }
+        }
+        .social-network{
+          margin-left: -4px;
+          a{
+            width: 28px;
+            text-align: center;
+            &:before{
+              font-size: $f-16;
+            }
+          }
+        }
+      }
+    }
+    .at-a-glance-content-main{
+
+    }
+  }
+}
