@@ -1,0 +1,92 @@
+.iran-map {
+  margin-top: 94px;
+  margin-bottom: 100px;
+
+  .show-title {
+    display: none;
+    position: absolute;
+    background-color: $color-mine-shaft-half;
+    border-radius: 2px;
+  }
+
+  .title-provinces {
+    h5 {
+      color: $color-corduroy;
+    }
+  }
+
+  .map {
+    height: 568px;
+    @include user-select();
+    .border, .island {
+      path {
+        fill: $color-white;
+      }
+    }
+    .province {
+      path {
+        fill: $color-silver;
+        stroke-width: 2px;
+        stroke: $color-wild-sand;
+      }
+    }
+    .sea, .lake {
+      path {
+        fill: $color-regal-blue
+      }
+    }
+    .province, .island, .province, .island {
+      path {
+        &:hover {
+          fill: $color-regal-blue !important;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .list {
+    li {
+      @include user-select();
+      @include media-query("(max-width: 1470px) and (min-width: 440px)") {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+
+    .total-articles-province {
+      a {
+        background-color: $color-gallery;
+      }
+    }
+    a {
+      background: $color-white-smoke;
+      color: $color-emperor;
+      line-height: 26px;
+      text-decoration: none;
+      padding: 4px 8px 4px 0;
+      border-radius: 6px;
+      box-shadow: 1px 2px 2px 0 $color-alto-2;
+      &:hover, &:hover + span {
+        background: $color-regal-blue;
+        color: $color-cream-can;
+      }
+    }
+    span {
+      color: $color-tuna;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translate(0, -50%);
+      pointer-events: none;
+      border-right: 1px solid $color-alto;
+      padding-right: 15px;
+      width: 35px;
+    }
+
+  }
+
+  @include media-query("(max-width: 991px)") {
+    margin-top: 30px;
+  }
+}

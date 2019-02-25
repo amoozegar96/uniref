@@ -267,27 +267,26 @@ if ($("#gauge-bands2").length) {
     var columnTemplate2 = series2.columns.template;
     columnTemplate2.strokeWidth = 2;
     columnTemplate2.strokeOpacity = 1;
-
-    $(".load-page > div *").show();
-    $(window).on("load", function () {
-        setTimeout(function () {
-            if ($(".load-page")[0]) {
-                $(".load-page").fadeOut();
-                $(".load-page > div *").addClass("stop-animation");
-                $("html,body").css({
-                    overflow: "",
-                    width: ""
-                });
-            }
-        }, 1000)
-    });
 }
+
+$(".load-page > div *").show();
+$(window).on("load", function () {
+    setTimeout(function () {
+        if ($(".load-page")[0]) {
+            $(".load-page").fadeOut();
+            $(".load-page > div *").addClass("stop-animation");
+            $("html,body").css({
+                overflow: "",
+                width: ""
+            });
+        }
+    }, 1000)
+});
 //==================
 // map
 //==================
 $(function () {
-    $('#IranMap .map .province path').click(function () {
-        var province = $(this).attr('class');
+    $('.iran-map .map .province path').click(function () {
         window.location.href = $("." + $(this).attr('class') + " a").attr("href");
     });
 });
