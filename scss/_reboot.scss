@@ -16,7 +16,8 @@
 [class^="icon-font-"]:after {
   font-family: icon_font, $DefaultFonts;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 25px;
+  line-height: 1;
 }
 
 * {
@@ -32,19 +33,24 @@ body {
 
 a, a:active, a:hover {
   text-decoration: none;
-  color: inherit
+  color: inherit;
 }
 
 a:hover {
   color: $color-cream-can !important;
+  & img{
+    opacity: .75;
+  }
 }
 
 ul li {
   list-style: none
 }
-.overflow-hidden{
+
+.overflow-hidden {
   overflow: hidden !important;
 }
+
 //==========================================
 //colors
 //==========================================
@@ -108,11 +114,19 @@ ul li {
   color: $color-bahama-blue;
 }
 
+.color-sapphire {
+  color: $color-sapphire;
+}
+
 //==========================================
 //background colors
 //==========================================
 .bg-black {
   background-color: $color-black;
+}
+
+.bg-black-85 {
+  background-color: $color-black-85;
 }
 
 .bg-black-tree-poppy {
@@ -121,6 +135,38 @@ ul li {
 
 .color-white-smoke {
   background-color: $color-white-smoke;
+}
+
+.bg-serenade {
+  background-color: $color-serenade;
+}
+
+.bg-clear-day {
+  background-color: $color-clear-day;
+}
+
+.bg-zircon {
+  background-color: $color-zircon;
+}
+
+.bg-bridal-heath {
+  background-color: $color-bridal-heath;
+}
+
+.bg-persian-green-to-pine-green-gradient {
+  background: linear-gradient(to left, #{$color-persian-green}, #{$color-pine-green}) !important;
+}
+
+.bg-denim-to-midnight-blue-gradient {
+  background: linear-gradient(to left, #{$color-denim}, #{$color-midnight-blue}) !important;
+}
+
+.bg-chestnut-rose-to-persian-red-gradient {
+  background: linear-gradient(to left, #{$color-chestnut-rose}, #{$color-persian-red}) !important;
+}
+
+.bg-silver-chalice-to-silver-sand-gradient {
+  background: linear-gradient(to left, #{$color-silver-chalice}, #{$color-silver-sand}) !important;
 }
 
 //==========================================
@@ -197,6 +243,14 @@ ul li {
   content: "\f112";
 }
 
+.icon-font-hint:before {
+  content: "\f113";
+}
+
+.icon-font-close-border:before {
+  content: "\f114";
+}
+
 //==========================================
 //z-index
 //==========================================
@@ -204,14 +258,25 @@ ul li {
   z-index: 1;
 }
 
-
 //==========================================
 //btns
 //==========================================
-.btn-black{
-  background-color: $color-black;
-  color: $color-white;
-  padding: 2px 16px;
+.btn {
+  &.btn-black {
+    background-color: $color-black;
+    color: $color-white;
+    padding: 2px 16px;
+  }
+
+  &.btn-transparent {
+    background-color: transparent;
+    color: $color-white;
+    padding: 2px 16px;
+    &:focus{
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem $color-white-25;
+    }
+  }
 }
 //==========================================
 //font size
@@ -253,6 +318,57 @@ ul li {
   }
 }
 
+//==========================================
+// hint
+//==========================================
+.hint {
+  width: $f-16;
+  margin-left: auto;
+  margin-right: 0;
+  .icon-font-hint{
+    &:before{
+      font-size: $f-16;
+    }
+  }
+  .hint-content {
+    position: absolute;
+    bottom: 100%;
+    left: -110px;
+    right: -110px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease;
+    padding-bottom: 10px;
+  }
+}
+
+.hint-popup {
+  .modal-dialog{
+    max-width: 1140px;
+    .modal-content{
+      border-radius: 10px;
+      .website{
+        margin: 0 0.6rem;
+      }
+    }
+  }
+}
+
+.rtl {
+  .hint {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+//==========================================
+// other
+//==========================================
+.phone-number,.website{
+  [class^="icon-font-"]:before{
+    font-size: $f-16;
+  }
+}
 //==========================================
 //load page
 //==========================================

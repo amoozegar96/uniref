@@ -1,0 +1,87 @@
+.landing-content {
+  .landing-item {
+    .title-landing-item {
+      border-radius: 8px;
+      top: -18px;
+      min-height: 36px;
+      min-width: 200px;
+      margin: 0 16px;
+      * {
+        line-height: 0;
+      }
+    }
+    .landing-item-text {
+      .landing-item-text-title {
+        &.border-bottom {
+          border-bottom-color: $color-scorpion !important;
+        }
+        .landing-item-text-content {
+        }
+      }
+
+      .landing-item-news{
+        a{
+          &:hover{
+            color: $color-tory-blue !important;
+          }
+        }
+      }
+      .book-items{
+        .book-item{
+          &.col-xl-12{
+            -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+            max-width: 20%;
+          }
+          .book-item-hover{
+            visibility: hidden;
+            opacity: 0;
+            @include transition(all .5s ease);
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            h3{
+              line-height: 1.6;
+            }
+          }
+          &:hover{
+            .book-item-hover{
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+          &.more-book-articles{
+            height: 206px;
+            > .scrollbar-inner{
+              padding: 16px 10px 16px 16px !important;
+              box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.20);
+            }
+            a{
+              font-size: 11px;
+              margin-bottom: 6px;
+              letter-spacing: -0.5px;
+            }
+            &.more-book-journals-and-scientific-publications{
+              a{
+                margin-bottom: 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .landing-item-chart {
+      &.stacked-3d-height {
+        height: 330px;
+      }
+      &.simple-column-chart {
+        height: 300px;
+      }
+      &.column-and-line-mix {
+        height: 350px;
+      }
+    }
+  }
+}
