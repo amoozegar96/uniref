@@ -496,6 +496,10 @@ $('[data-chart="variable-radius-pie-chart"]').each(function(){
     series.colors.step = 3;
     series.hiddenState.properties.endAngle = -90;
 });
+
+
+$('[data-chart="radia-line-graph"]').each(function(){
+});
 //==================
 // Map
 //==================

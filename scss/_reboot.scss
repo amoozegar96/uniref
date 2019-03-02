@@ -118,6 +118,14 @@ ul li {
   color: $color-sapphire;
 }
 
+.color-cod-gray {
+  color: $color-cod-gray;
+}
+
+.color-dim-gray {
+  color: $color-dim-gray;
+}
+
 //==========================================
 //background colors
 //==========================================
@@ -153,6 +161,18 @@ ul li {
   background-color: $color-bridal-heath;
 }
 
+.bg-sauvignon {
+  background-color: $color-sauvignon;
+}
+
+.bg-macaroni-and-cheese {
+  background-color: $color-macaroni-and-cheese;
+}
+
+.bg-athens-gray {
+  background-color: $color-athens-gray;
+}
+
 .bg-persian-green-to-pine-green-gradient {
   background: linear-gradient(to left, #{$color-persian-green}, #{$color-pine-green}) !important;
 }
@@ -169,6 +189,21 @@ ul li {
   background: linear-gradient(to left, #{$color-silver-chalice}, #{$color-silver-sand}) !important;
 }
 
+//==========================================
+// background image options
+//==========================================
+.bg-no-repeat{
+  background-repeat: no-repeat;
+}
+.bg-position-center{
+  background-position: center;
+}
+.bg-size-cover{
+  background-size: cover;
+}
+.bg-attachment-fixed{
+  background-attachment: fixed;
+}
 //==========================================
 //margin and padding
 //==========================================
