@@ -1,24 +1,14 @@
 .landing-content {
   .landing-item {
-    .landing-bg-blur{
-      left: 0;
-      right: 0;
-      top:0;
-      bottom:0;
-      background-position: center ;
-      &,&::before{
-        background-image: inherit;
-        background-size: cover;
-      }
+    &.landing-item-map{
       &::before{
-        background-position: right ;
         content: '';
         position: absolute;
-        left: -5px;
-        right: -5px;
-        top:-5px;
-        bottom:-5px;
-        filter: blur(5px);
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-image: linear-gradient(to left,#000000 ,transparent);
       }
     }
     .title-landing-item {
@@ -47,7 +37,7 @@
               max-width: 20%;
               .landing-profile-image {
                 width: 163px;
-                height: 9.69rem;
+                height: 163px;
               }
             }
             .landing-profile-image{
@@ -55,8 +45,12 @@
             }
           }
           &.landing-small-profile{
-            img{
-              height: 2.8rem;
+            .landing-profile-image{
+              width: 32px;
+              height: 32px;
+              box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+              img{
+              }
             }
           }
         }
@@ -94,7 +88,7 @@
             }
           }
           &.more-book-articles {
-            height: 206px;
+            height: 297px;
             > .scrollbar-inner {
               padding: 16px 10px 16px 16px !important;
               box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.20);
@@ -106,7 +100,7 @@
             }
             &.more-book-journals-and-scientific-publications {
               a {
-                margin-bottom: 4px;
+                margin-bottom: 5px;
               }
             }
           }
@@ -133,6 +127,50 @@
       }
       &.column-and-line-mix {
         height: 350px;
+      }
+      &.radial-line-graph {
+        height: 470px;
+      }
+    }
+  }
+  .landing-sidebar-parent{
+    left: 0;
+    right:0;
+    .landing-sidebar{
+      z-index: 1;
+      ul{
+        box-shadow: 0 0 16px -3px rgba(0,0,0,0.34);
+        border-radius: 5px;
+        li{
+          a{
+            &:before{
+              content: "";
+              position: absolute;
+              width: 5px;
+              top:0;
+              bottom: 0;
+              right: 0;
+              background-color: $color-orange-peel;
+              visibility: hidden;
+            }
+            &.active{
+              background-color: $color-silver-chalice-24;
+              box-shadow: inset 0 0 5px 0 rgba(134, 134, 134, 0.18);
+              &:before{
+                visibility: visible;
+              }
+            }
+
+            &:not(.active):hover{
+              background-color: rgba(177, 176, 176, 0.1);
+              box-shadow: inset 0 0 5px 0 rgba(134, 134, 134, 0.09);
+              &:before{
+                visibility: visible;
+                opacity: 0.2;
+              }
+            }
+          }
+        }
       }
     }
   }
