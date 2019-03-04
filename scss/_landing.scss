@@ -1,14 +1,14 @@
 .landing-content {
   .landing-item {
-    &.landing-item-map{
-      &::before{
+    &.landing-item-map {
+      &::before {
         content: '';
         position: absolute;
         left: 0;
         right: 0;
         top: 0;
         bottom: 0;
-        background-image: linear-gradient(to left,#000000 ,transparent);
+        background-image: linear-gradient(to left, #000000, transparent);
       }
     }
     .title-landing-item {
@@ -17,6 +17,13 @@
       min-height: 36px;
       min-width: 200px;
       margin: 0 16px;
+
+      @include media-query("(max-width:575px)"){
+        min-width: 160px;
+        span{
+          font-size: 12px;
+        }
+      }
       * {
         line-height: 0;
       }
@@ -29,27 +36,72 @@
       }
 
       .landing-item-text-content {
-        .landing-profile{
-          li{
-            &:not([class*="col-"]){
+        .landing-profile {
+          li {
+            &:not([class*="col-"]) {
               -ms-flex: 0 0 20%;
               flex: 0 0 20%;
               max-width: 20%;
               .landing-profile-image {
                 width: 163px;
                 height: 163px;
+                @include media-query("(max-width:1200px)") {
+                  width: 120px;
+                  height: 120px;
+                }
+                @include media-query("(max-width:991px)") {
+                  width: 100px;
+                  height: 100px;
+                }
+                @include media-query("(max-width:767px)") {
+                  width: 75px;
+                  height: 75px;
+                }
+                @include media-query("(max-width:575px)") {
+                  width: 55px;
+                  height: 55px;
+                }
               }
             }
-            .landing-profile-image{
+            .landing-profile-image {
               box-shadow: -2px 0px 20px -4px rgba(0, 0, 0, 0.50);
             }
           }
-          &.landing-small-profile{
-            .landing-profile-image{
+          &:not(.landing-small-profile){
+            .landing-profile-content{
+              .landing-profile-content-title{
+                @include media-query("(max-width:767px)") {
+                  font-size: $f-10;
+                }
+              }
+            }
+          }
+          &.landing-small-profile {
+            .landing-profile-image {
               width: 32px;
               height: 32px;
-              box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-              img{
+              box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+              @include media-query("(max-width:575px)"){
+                width: 35px;
+                height: 35px;
+                margin-bottom: 8px;
+              }
+            }
+            .landing-profile-content{
+              .landing-profile-content-title{
+                @include media-query("(max-width:575px)"){
+                  text-align: center !important;
+                }
+              }
+              .landing-profile-content-sub-title{
+                @include media-query("(max-width:991px)") {
+                  line-height: 1.2;
+                  display: block;
+                  margin-top: 4px;
+                }
+                @include media-query("(max-width:575px)"){
+                  text-align: center;
+                }
               }
             }
           }
@@ -57,6 +109,12 @@
       }
       .landing-item-news {
         a {
+
+          @include media-query("(max-width:575px)") {
+            font-size: $f-12;
+            line-height: 1.6;
+            display: block;
+          }
           &:hover {
             color: $color-tory-blue !important;
           }
@@ -69,6 +127,23 @@
             flex: 0 0 20%;
             max-width: 20%;
           }
+
+          @include media-query("(max-width:991px)") {
+            &.col-xl-12 {
+              -ms-flex: 0 0 20%;
+              flex: 0 0 33.333333%;
+              max-width: 33.333333%;
+              margin-bottom: 28px;
+            }
+          }
+            > div:not(.scroll-wrapper) {
+              min-height: 100%;
+              height: 100%;
+              @include media-query("(max-width:767px)") {
+                height: 34vw;
+                min-height: 34vw;
+              }
+            }
           .book-item-hover {
             visibility: hidden;
             opacity: 0;
@@ -79,6 +154,13 @@
             left: 0;
             h3 {
               line-height: 1.6;
+              @include media-query("(max-width:575px)"){
+                font-size: 8px;
+              }
+            }
+            .btn.btn-transparent{
+              padding: 2px 5px;
+              font-size: 10px;
             }
           }
           &:hover {
@@ -88,7 +170,20 @@
             }
           }
           &.more-book-articles {
-            height: 297px;
+            height: 296px;
+
+            @include media-query("(max-width:1200px)") {
+              height: 16vw;
+            }
+            @include media-query("(max-width:991px)") {
+              height: 295px;
+            }
+            @include media-query("(max-width:767px)") {
+              height: 34vw;
+              min-height: 34vw;
+              flex: 0 0 66%;
+              max-width: 66%;
+            }
             > .scrollbar-inner {
               padding: 16px 10px 16px 16px !important;
               box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.20);
@@ -97,6 +192,10 @@
               font-size: 11px;
               margin-bottom: 6px;
               letter-spacing: -0.5px;
+              @include media-query("(max-width:767px)") {
+                font-size: $f-14;
+                margin-bottom: 3px;
+              }
             }
             &.more-book-journals-and-scientific-publications {
               a {
@@ -119,58 +218,102 @@
       }
     }
     .landing-item-chart {
+      @include media-query("(max-width:767px)") {
+        height: 80vw;
+      }
       &.stacked-3d-height {
         height: 330px;
+        @include media-query("(max-width:767px)") {
+          height: 70vw;
+        }
+      }
+      &.variable-radius-pie-chart {
+        @include media-query("(max-width:767px)") {
+          height: 37vw;
+          tspan{
+            font-size: 8px;
+          }
+          [aria-labelledby] {
+            visibility: hidden;
+          }
+        }
       }
       &.simple-column-chart {
         height: 300px;
+        @include media-query("(max-width:767px)") {
+          height: 64vw;
+          text{
+            transform: rotate(25deg) !important;
+          }
+          [role="tooltip"]{
+            text{
+              transform: rotate(0) !important;
+            }
+          }
+        }
       }
       &.column-and-line-mix {
         height: 350px;
+        @include media-query("(max-width:767px)") {
+          height: 66vw;
+        }
       }
       &.radial-line-graph {
         height: 470px;
       }
     }
+    .landing-contact-us{
+      span{
+        @include media-query("(max-width:575px)"){
+          font-size: $f-14;
+        }
+      }
+    }
   }
-  .landing-sidebar-parent{
+  .landing-sidebar-parent {
     left: 0;
-    right:0;
-    .landing-sidebar{
+    right: 0;
+    .landing-sidebar {
       z-index: 1;
-      ul{
-        box-shadow: 0 0 16px -3px rgba(0,0,0,0.34);
+      ul {
+        box-shadow: 0 0 16px -3px rgba(0, 0, 0, 0.34);
         border-radius: 5px;
-        li{
-          a{
-            &:before{
+        li {
+          a {
+            &:before {
               content: "";
               position: absolute;
               width: 5px;
-              top:0;
+              top: 0;
               bottom: 0;
               right: 0;
               background-color: $color-orange-peel;
               visibility: hidden;
             }
-            &.active{
+            &.active {
               background-color: $color-silver-chalice-24;
               box-shadow: inset 0 0 5px 0 rgba(134, 134, 134, 0.18);
-              &:before{
+              &:before {
                 visibility: visible;
               }
             }
 
-            &:not(.active):hover{
+            &:not(.active):hover {
               background-color: rgba(177, 176, 176, 0.1);
               box-shadow: inset 0 0 5px 0 rgba(134, 134, 134, 0.09);
-              &:before{
+              &:before {
                 visibility: visible;
                 opacity: 0.2;
               }
             }
           }
         }
+      }
+      @include media-query("(max-width:991px)") {
+        display: none;
+        position: relative;
+        top: 0;
+        left: 0;
       }
     }
   }

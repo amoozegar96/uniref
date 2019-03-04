@@ -17,12 +17,19 @@ footer {
       @include media-query("(max-width:1100px) and (min-width:767px)") {
         font-size: $f-12;
       }
+      @include media-query("(max-width:575px)") {
+        font-size: $f-16;
+      }
     }
   }
   .content-footer {
     a, p {
       @include media-query("(max-width:1100px) and (min-width:767px)") {
         font-size: $f-10;
+      }
+
+      @include media-query("(max-width:575px)") {
+        font-size: $f-14;
       }
     }
   }

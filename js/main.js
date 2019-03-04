@@ -551,7 +551,7 @@ $('[data-chart="simple-column-chart"]').each(function () {
 
     categoryAxis.renderer.labels.template.adapter.add("dy", function (dy, target) {
         if (target.dataItem && target.dataItem.index & 2 == 2) {
-            return dy + 25;
+            return dy + 0;
         }
         return dy;
     });
@@ -836,7 +836,6 @@ $('[data-sidebarfix]').each(function () {
     });
 });
 $(document).on("click", ".landing-sidebar li a", function (e) {
-    $(this).addClass("active").parents("li").siblings("li").find(".active").removeClass("active");
     if ($($(this).attr("href")).find(".title-landing-item").length) {
         $("html,body").animate({
             scrollTop: $($(this).attr("href")).offset().top - ($(this).parents("body").find(".header .slogan").height() + $(this).parents("body").find(".header .bottom-header").height() + 25)
@@ -849,4 +848,24 @@ $(document).on("click", ".landing-sidebar li a", function (e) {
     }
     e.stopPropagation();
     e.preventDefault();
+});
+$(window).on('ready load resize orientationchange', function () {
+    var $this_size = $(this);
+
+    if($this_size >= 992){
+        $(window).scroll(function () {
+            var $this_scroll = $(this);
+            $(".landing-item").each(function () {
+                if($(this).find(".title-landing-item").length){
+                    if($this_scroll.scrollTop() >= $(this).offset().top - ($(this).parents("body").find(".header .slogan").height() + $(this).parents("body").find(".header .bottom-header").height() + 30) && $this_scroll.scrollTop() <=  $(this).offset().top + $(this).height()){
+                        $("[href='#"+$(this).attr("id")+"']").addClass("active").parents("li").siblings("li").find(".active").removeClass("active");
+                    }
+                }else{
+                    if($this_scroll.scrollTop() >= $(this).offset().top - ($(this).parents("body").find(".header .slogan").height() + $(this).parents("body").find(".header .bottom-header").height()) && $this_scroll.scrollTop() <=  $(this).offset().top + $(this).height() ){
+                        $("[href='#"+$(this).attr("id")+"']").addClass("active").parents("li").siblings("li").find(".active").removeClass("active");
+                    }
+                }
+            });
+        });
+    }
 });
