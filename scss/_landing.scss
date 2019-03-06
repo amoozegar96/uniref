@@ -218,6 +218,7 @@
       }
     }
     .landing-item-chart {
+      height: 330px;
       @include media-query("(max-width:767px)") {
         height: 80vw;
       }

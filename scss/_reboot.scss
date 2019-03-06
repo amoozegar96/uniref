@@ -407,6 +407,18 @@ ul li {
 //==========================================
 //load page
 //==========================================
+//.folding-cube {
+//  width: 40px;
+//  height: 40px;
+//  -webkit-transform: rotateZ(45deg);
+//  transform: rotateZ(45deg);
+//  position: fixed;
+//  left: 50%;
+//  top: 50%;
+//  margin: -20px 0 0 -20px;
+//  z-index: 100;
+//}
+
 .load-page {
   position: fixed;
   top: 0;
@@ -417,77 +429,104 @@ ul li {
   z-index: 999;
   .loading {
     position: absolute;
-    width: 200px;
-    height: 120px;
+    width: 60px;
+    height: 60px;
     left: 0;
     right: 0;
     margin: auto;
     top: 50%;
-    transform: translate(0, -50%);
-    > div {
-      display: none;
+    -webkit-transform: rotateZ(45deg) translate(0, -50%);
+    transform: rotateZ(45deg) translate(0, -50%);
+    .folding-cube-child {
       float: left;
-      width: 18px;
-      height: 0;
-      margin: 10px 1px 10px 1px;
+      width: 50%;
+      height: 50%;
+      position: relative;
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+
+    .folding-cube-child:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background-color: $color-prussian-blue;
-      -webkit-transform-origin: bottom center;
-      -webkit-animation: loading-page 1.5s ease-in-out infinite;
-      animation: loading-page 1.5s ease-in-out infinite;
+      -webkit-animation: fold-cube-angle-animate 2.4s infinite linear both;
+      animation: fold-cube-angle-animate 2.4s infinite linear both;
+      -webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
     }
-    .shaft1 {
-      -webkit-animation-delay: 0.1s;
+    .folding-cube-child2 {
+      -webkit-transform: scale(1.1) rotateZ(90deg);
+      transform: scale(1.1) rotateZ(90deg);
     }
-    .shaft2 {
-      -webkit-animation-delay: 0.2s;
+    .folding-cube-child3 {
+      -webkit-transform: scale(1.1) rotateZ(180deg);
+      transform: scale(1.1) rotateZ(180deg);
     }
-    .shaft3 {
+    .folding-cube-child4 {
+      -webkit-transform: scale(1.1) rotateZ(270deg);
+      transform: scale(1.1) rotateZ(270deg);
+    }
+    .folding-cube-child2:before {
       -webkit-animation-delay: 0.3s;
+      animation-delay: 0.3s;
     }
-    .shaft4 {
-      -webkit-animation-delay: 0.4s;
-    }
-    .shaft5 {
-      -webkit-animation-delay: 0.5s;
-    }
-    .shaft6 {
+    .folding-cube-child3:before {
       -webkit-animation-delay: 0.6s;
+      animation-delay: 0.6s;
     }
-    .shaft7 {
-      -webkit-animation-delay: 0.7s;
-    }
-    .shaft8 {
-      -webkit-animation-delay: 0.8s;
-    }
-    .shaft9 {
+    .folding-cube-child4:before {
       -webkit-animation-delay: 0.9s;
-    }
-    .shaft10 {
-      -webkit-animation-delay: 1s;
+      animation-delay: 0.9s;
     }
   }
 
 }
 
-@-webkit-keyframes loading-page {
-  0% {
-    -webkit-transform: scaleY(0.05);
-    background-color: $color-turquoise;
-    height: 110px;
+@-webkit-keyframes fold-cube-angle-animate {
+  0%,
+  10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
   }
-  50% {
-    -webkit-transform: scaleY(1);
-    background-color: $color-prussian-blue;
-    height: 110px;
-
+  25%,
+  75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
   }
+  90%,
   100% {
-    -webkit-transform: scaleY(0.05);
-    background-color: $color-turquoise;
-    height: 110px;
+    -webkit-transform: perspective(140px) rotateY(180deg);
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
   }
 }
-
+@keyframes fold-cube-angle-animate {
+  0%,
+  10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+  75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
 .stop-animation {
   animation-play-state: paused !important;
   height: 120px !important;

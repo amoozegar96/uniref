@@ -798,18 +798,18 @@ jQuery(document).ready(function () {
 // page loader
 //==================
 
-$(".load-page > div *").show();
 $(window).on("load", function () {
     setTimeout(function () {
         if ($(".load-page")[0]) {
-            $(".load-page").fadeOut();
             $(".load-page > div *").addClass("stop-animation");
+            $(".load-page .loading").hide();
+            $(".load-page").fadeOut();
             $("html,body").css({
                 overflow: "",
                 width: ""
             });
         }
-    }, 1000)
+    }, 150);
 });
 //==================
 // Parallax
@@ -852,7 +852,7 @@ $(document).on("click", ".landing-sidebar li a", function (e) {
 $(window).on('ready load resize orientationchange', function () {
     var $this_size = $(this);
 
-    if($this_size >= 992){
+    if($this_size.width() >= 992){
         $(window).scroll(function () {
             var $this_scroll = $(this);
             $(".landing-item").each(function () {
