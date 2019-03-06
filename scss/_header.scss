@@ -89,6 +89,7 @@ header {
     z-index: 20;
     background-color: $color-Gainsboro;
     box-shadow: 0 0 12px -3px $color-prussian-blue;
+    padding: 0 25px;
     .icon-search-small {
       left: 10px;
       height: 21px;
@@ -106,6 +107,11 @@ header {
     background-color: #272727;
     transition: all .5s;
     overflow-y: scroll;
+    .nav-link{
+      @include media-query(LB) {
+       padding: .5rem 0;
+      }
+    }
     .fas.float-left {
       top: 6px;
     }
@@ -118,6 +124,14 @@ header {
       padding: 15px;
       &.menu-down {
         display: none;
+        li {
+          @include media-query(LB) {
+            color: $color-white;
+            padding: 0;
+            font-size: 14px;
+            margin-bottom: 5px;
+          }
+        }
       }
     }
   }
