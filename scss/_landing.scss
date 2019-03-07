@@ -127,7 +127,6 @@
             flex: 0 0 20%;
             max-width: 20%;
           }
-
           @include media-query("(max-width:991px)") {
             &.col-xl-12 {
               -ms-flex: 0 0 20%;
@@ -139,10 +138,9 @@
             > div:not(.scroll-wrapper) {
               min-height: 100%;
               height: 100%;
-              @include media-query("(max-width:767px)") {
-                height: 34vw;
-                min-height: 34vw;
-              }
+              background-color: $color-silver-chalice;
+              border-radius: 6px;
+              overflow: hidden;
             }
           .book-item-hover {
             visibility: hidden;
@@ -163,11 +161,15 @@
               font-size: 10px;
             }
           }
-          &:hover {
-            .book-item-hover {
+          & img:hover {
+            &+ .book-item-hover {
               visibility: visible;
               opacity: 1;
             }
+          }
+          .book-item-hover:hover {
+            visibility: visible;
+            opacity: 1;
           }
           &.more-book-articles {
             height: 296px;
@@ -279,6 +281,7 @@
       ul {
         box-shadow: 0 0 16px -3px rgba(0, 0, 0, 0.34);
         border-radius: 5px;
+        margin-left: 40px !important;
         li {
           a {
             &:before {
