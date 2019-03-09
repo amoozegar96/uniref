@@ -275,7 +275,6 @@ $('[data-chart="3d-stacked"]').each(function () {
 
 // Create chart instance
     var chart = am4core.create($(this).attr("id"), am4charts.XYChart3D);
-
 // Add data
     chart.data = [{
         "country": "USA",
@@ -777,6 +776,45 @@ $('[data-chart="radial-line-graph"]').each(function () {
     series.strokeWidth = 3;
 
 });
+
+var words = [
+    {text: "معماری", weight: 10.5, link: 'http://uniref.ir'},
+    {text: "دانش آموزان", weight: 9.4, link: 'http://uniref.ir'},
+    {text: "آموزش", weight: 8, link: 'http://uniref.ir'},
+    {text: "محیط زیست", weight: 6.2, link: 'http://uniref.ir'},
+    {text: "ایران", weight: 5, link: 'http://uniref.ir'},
+    {text: "یادگیری", weight: 5, link: 'http://uniref.ir'},
+    {text: "کارآفرینی", weight: 13, link: 'http://uniref.ir'},
+    {text: "بهینه سازی", weight: 10.5, link: 'http://uniref.ir'},
+    {text: "توسعه پایدار", weight: 13, link: 'http://uniref.ir'},
+    {text: "معماری", weight: 10.5, link: 'http://uniref.ir'},
+    {text: "دانش آموزان", weight: 9.4, link: 'http://uniref.ir'},
+    {text: "آموزش", weight: 8, link: 'http://uniref.ir'},
+    {text: "محیط زیست", weight: 6.2, link: 'http://uniref.ir'},
+    {text: "ایران", weight: 5, link: 'http://uniref.ir'},
+    {text: "یادگیری", weight: 5, link: 'http://uniref.ir'},
+    {text: "کارآفرینی", weight: 13, link: 'http://uniref.ir'},
+    {text: "بهینه سازی", weight: 10.5, link: 'http://uniref.ir'},
+    {text: "توسعه پایدار", weight: 13, link: 'http://uniref.ir'},
+    {text: "معماری", weight: 10.5, link: 'http://uniref.ir'},
+    {text: "دانش آموزان", weight: 9.4, link: 'http://uniref.ir'},
+    {text: "آموزش", weight: 8, link: 'http://uniref.ir'},
+    {text: "محیط زیست", weight: 6.2, link: 'http://uniref.ir'},
+    {text: "ایران", weight: 5, link: 'http://uniref.ir'},
+    {text: "یادگیری", weight: 5, link: 'http://uniref.ir'},
+    {text: "کارآفرینی", weight: 13, link: 'http://uniref.ir'},
+    {text: "بهینه سازی", weight: 10.5, link: 'http://uniref.ir'},
+    {text: "توسعه پایدار", weight: 13, link: 'http://uniref.ir'},
+
+
+
+
+
+    /* ... */
+];
+
+
+$('#demo').jQCloud(words);
 //==================
 // Map
 //==================

@@ -1,0 +1,45 @@
+$jqcloud-font: 10px "IRANSans", "Arial", sans-serif;
+
+$jqcloud-link-hover-color: #00094d;
+
+$jqcloud-words: (
+        w1: (100%, #007e9c),
+        w2: (150%, #2db9b4),
+        w3: (200%, #a0ddff),
+        w4: (250%, #af2a00),
+        w5: (300%, #90a0dd),
+        w6: (350%, #90c5f0),
+        w7: (400%, #bf6b00),
+        w8: (450%, #00ccff),
+        w9: (500%, #00ccff),
+        w10: (400%, #006179)
+) !default;
+
+.jqcloud {
+  font: $jqcloud-font;
+  line-height: normal;
+  overflow: hidden;
+  position: relative;
+}
+
+.jqcloud-word {
+  margin: 0;
+  padding: 0;
+
+  @each $word, $config in $jqcloud-words {
+    &.#{$word} {
+      color: nth($config, 2);
+      font-size: nth($config, 1);
+    }
+  }
+
+  a {
+    color: inherit;
+    font-size: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: $jqcloud-link-hover-color;
+    }
+  }
+}
