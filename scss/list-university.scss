@@ -1,0 +1,37 @@
+.list-uni {
+  .box-uni {
+    box-shadow: 0 1px 12px 0 #0000002e;
+    .logo-uni{
+      width: 154px;
+      background-color: #eef7ff;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 48%;
+    }
+    .info-uni{
+      h2{
+        font-size: 16px;
+        color: $color-prussian-blue;
+        font-weight:bold;
+      }
+      .content-info{
+        h5,h6{
+        font-size: $f-12;
+        }
+        h5{
+          color: $color-black-85;
+          font-weight:bold;
+        }
+        h6{
+          color:$color-dove-gray;
+          font-weight: 600;
+        }
+      }
+      a{
+        font-size: 10px;
+        background-color: $color-midnight-blue;
+        border-color: #00386e;
+      }
+    }
+  }
+}

@@ -777,44 +777,7 @@ $('[data-chart="radial-line-graph"]').each(function () {
 
 });
 
-var words = [
-    {text: "معماری", weight: 10.5, link: 'http://uniref.ir'},
-    {text: "دانش آموزان", weight: 9.4, link: 'http://uniref.ir'},
-    {text: "آموزش", weight: 8, link: 'http://uniref.ir'},
-    {text: "محیط زیست", weight: 6.2, link: 'http://uniref.ir'},
-    {text: "ایران", weight: 5, link: 'http://uniref.ir'},
-    {text: "یادگیری", weight: 5, link: 'http://uniref.ir'},
-    {text: "کارآفرینی", weight: 13, link: 'http://uniref.ir'},
-    {text: "بهینه سازی", weight: 10.5, link: 'http://uniref.ir'},
-    {text: "توسعه پایدار", weight: 13, link: 'http://uniref.ir'},
-    {text: "معماری", weight: 10.5, link: 'http://uniref.ir'},
-    {text: "دانش آموزان", weight: 9.4, link: 'http://uniref.ir'},
-    {text: "آموزش", weight: 8, link: 'http://uniref.ir'},
-    {text: "محیط زیست", weight: 6.2, link: 'http://uniref.ir'},
-    {text: "ایران", weight: 5, link: 'http://uniref.ir'},
-    {text: "یادگیری", weight: 5, link: 'http://uniref.ir'},
-    {text: "کارآفرینی", weight: 13, link: 'http://uniref.ir'},
-    {text: "بهینه سازی", weight: 10.5, link: 'http://uniref.ir'},
-    {text: "توسعه پایدار", weight: 13, link: 'http://uniref.ir'},
-    {text: "معماری", weight: 10.5, link: 'http://uniref.ir'},
-    {text: "دانش آموزان", weight: 9.4, link: 'http://uniref.ir'},
-    {text: "آموزش", weight: 8, link: 'http://uniref.ir'},
-    {text: "محیط زیست", weight: 6.2, link: 'http://uniref.ir'},
-    {text: "ایران", weight: 5, link: 'http://uniref.ir'},
-    {text: "یادگیری", weight: 5, link: 'http://uniref.ir'},
-    {text: "کارآفرینی", weight: 13, link: 'http://uniref.ir'},
-    {text: "بهینه سازی", weight: 10.5, link: 'http://uniref.ir'},
-    {text: "توسعه پایدار", weight: 13, link: 'http://uniref.ir'},
 
-
-
-
-
-    /* ... */
-];
-
-
-$('#demo').jQCloud(words);
 //==================
 // Map
 //==================
@@ -907,3 +870,41 @@ $(window).on('ready load resize orientationchange', function () {
         });
     }
 });
+
+
+if ($('#demo').length){
+
+
+    var words = [
+        {text: "معماری", weight: 10.5, link: 'http://uniref.ir'},
+        {text: "دانش آموزان", weight: 9.4, link: 'http://uniref.ir'},
+        {text: "آموزش", weight: 8, link: 'http://uniref.ir'},
+        {text: "محیط زیست", weight: 6.2, link: 'http://uniref.ir'},
+        {text: "ایران", weight: 5, link: 'http://uniref.ir'},
+        {text: "یادگیری", weight: 5, link: 'http://uniref.ir'},
+        {text: "کارآفرینی", weight: 13, link: 'http://uniref.ir'},
+        {text: "بهینه سازی", weight: 10.5, link: 'http://uniref.ir'},
+        {text: "توسعه پایدار", weight: 13, link: 'http://uniref.ir'},
+        {text: "معماری", weight: 10.5, link: 'http://uniref.ir'},
+        {text: "دانش آموزان", weight: 9.4, link: 'http://uniref.ir'},
+        {text: "آموزش", weight: 8, link: 'http://uniref.ir'},
+        {text: "محیط زیست", weight: 6.2, link: 'http://uniref.ir'},
+        {text: "ایران", weight: 5, link: 'http://uniref.ir'},
+        {text: "یادگیری", weight: 5, link: 'http://uniref.ir'},
+        {text: "کارآفرینی", weight: 13, link: 'http://uniref.ir'},
+        {text: "بهینه سازی", weight: 10.5, link: 'http://uniref.ir'},
+        {text: "توسعه پایدار", weight: 13, link: 'http://uniref.ir'},
+        {text: "معماری", weight: 10.5, link: 'http://uniref.ir'},
+        {text: "دانش آموزان", weight: 9.4, link: 'http://uniref.ir'},
+        {text: "آموزش", weight: 8, link: 'http://uniref.ir'},
+        {text: "محیط زیست", weight: 6.2, link: 'http://uniref.ir'},
+        {text: "ایران", weight: 5, link: 'http://uniref.ir'},
+        {text: "یادگیری", weight: 5, link: 'http://uniref.ir'},
+        {text: "کارآفرینی", weight: 13, link: 'http://uniref.ir'},
+        {text: "بهینه سازی", weight: 10.5, link: 'http://uniref.ir'},
+        {text: "توسعه پایدار", weight: 13, link: 'http://uniref.ir'}];
+
+
+    $('#demo').jQCloud(words);
+}
+
