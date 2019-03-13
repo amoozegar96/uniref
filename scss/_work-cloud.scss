@@ -4,3 +4,22 @@
   border-radius: 10px;
   padding: 35px 0 !important;
 }
+
+.import-research{
+  background: #fff;
+  box-shadow: 1px 1px 11px #00000024;
+  .custom-card{
+    display: inline-block;
+    flex:auto;
+    max-width: none;
+    .custom-card-sub-title{
+      line-height: 2;
+    }
+    .custom-card-icon{
+      img{
+        width:210px;
+        height:205px;
+      }
+    }
+  }
+}
