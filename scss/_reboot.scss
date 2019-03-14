@@ -128,6 +128,7 @@ ul li {
 .color-Dodger-Blue{
   color: $color-Dodger-Blue;
 }
+
 //==========================================
 //background colors
 //==========================================
@@ -177,6 +178,12 @@ ul li {
 
 .bg-silver-chalice {
   background-color: $color-silver-chalice;
+}
+.bg-color-prussian-blue {
+  background-color: $color-prussian-blue;
+}
+.bg-color-gray-white {
+  background-color: $color-gray-white;
 }
 
 .bg-persian-green-to-pine-green-gradient {
@@ -327,20 +334,21 @@ ul li {
 //==========================================
 //font size
 //==========================================
+
 .font-size-10 {
-  font-size: $f-10;
+  font-size: $f-10 !important;
 }
 
 .font-size-12 {
-  font-size: $f-12;
+  font-size: $f-12 !important;
 }
 
 .font-size-14 {
-  font-size: $f-14;
+  font-size: $f-14 !important;
 }
 
 .font-size-16 {
-  font-size: $f-16;
+  font-size: $f-16 !important;
 }
 
 //==========================================
