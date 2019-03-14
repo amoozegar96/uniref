@@ -7,6 +7,22 @@
   .list-articles{
     li{
       border-radius: 7px;
+      &.d-flex.text-black,&.d-flex.text-white{
+        > div{
+          background-color: inherit;
+          padding: 1rem;
+          align-items: center;
+          justify-content: center;
+          &:first-child{
+            border-radius: 0 7px 7px 0;
+            justify-content: right;
+          }
+          &:last-child{
+            border-radius: 7px 0 0 7px;
+          }
+        }
+      }
+
     }
   }
 }
