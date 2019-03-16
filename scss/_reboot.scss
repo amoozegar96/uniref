@@ -125,9 +125,11 @@ ul li {
 .color-dim-gray {
   color: $color-dim-gray;
 }
-.color-Dodger-Blue{
+
+.color-Dodger-Blue {
   color: $color-Dodger-Blue;
 }
+
 .color-boulder {
   color: $color-boulder;
 }
@@ -135,6 +137,11 @@ ul li {
 .color-tundora {
   color: $color-tundora;
 }
+
+.color-black-85 {
+  color: $color-black-85;
+}
+
 //==========================================
 //background colors
 //==========================================
@@ -193,12 +200,15 @@ ul li {
 .bg-white-smoke-1 {
   background-color: $color-white-smoke-1;
 }
+
 .bg-color-prussian-blue {
   background-color: $color-prussian-blue;
 }
+
 .bg-color-gray-white {
   background-color: $color-gray-white;
 }
+
 .bg-color-White-Smoke {
   background-color: $color-White-Smoke;
 }
@@ -319,21 +329,27 @@ ul li {
 .icon-font-close-border:before {
   content: "\f114";
 }
+
 .icon-font-arrow-bottom:before {
   content: "\f115";
 }
+
 .icon-font-clock:before {
   content: "\f116";
 }
+
 .icon-font-conference:before {
   content: "\f117";
 }
+
 .icon-font-radio:before {
   content: "\f118";
 }
+
 .icon-font-jurnal:before {
   content: "\f119";
 }
+
 .icon-font-team-work:before {
   content: "\f120";
 }
@@ -601,6 +617,22 @@ ul li {
     position: relative;
   }
 }
-.error-404{
-    font-size:300px;
+
+.error-404 {
+  font-size: 300px;
+}
+
+.list-articles {
+  .btn {
+    border: 0;
+    a {
+      width: 100px;
+      border-radius: 5px !important;
+      border: 2px solid $color-prussian-blue;
+      transition: all .33s;
+      &:hover {
+        background-color: $color-prussian-blue;
+      }
+    }
+  }
 }
