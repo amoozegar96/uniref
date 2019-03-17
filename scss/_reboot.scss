@@ -621,7 +621,9 @@ ul li {
 .error-404 {
   font-size: 300px;
 }
-
+//================
+//list-article
+//===============
 .list-articles {
   .btn {
     border: 0;
@@ -636,3 +638,15 @@ ul li {
     }
   }
 }
+
+//================
+//modal
+//===============
+.modal-backdrop{
+  background-color: #000 !important;
+}
+
+.list-articles-noneImg .list-articles li.d-flex.text-black > .modal{
+  background-color: transparent;
+}
+
