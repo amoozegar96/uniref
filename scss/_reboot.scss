@@ -360,6 +360,15 @@ ul li {
 .icon-font-team-work:before {
   content: "\f120";
 }
+.icon-font-conference-2:before {
+  content: "\f121";
+}
+.icon-font-conference-3:before {
+  content: "\f122";
+}
+.icon-font-university:before {
+  content: "\f123";
+}
 
 //==========================================
 //z-index
@@ -635,12 +644,13 @@ ul li {
   .btn {
     border: 0;
     a {
-      width: 100px;
+      width: 85px;
       border-radius: 5px !important;
       border: 2px solid $color-prussian-blue;
       transition: all .33s;
       &:hover {
         background-color: $color-prussian-blue;
+        color: $color-white !important;
       }
     }
   }
