@@ -654,7 +654,7 @@ ul li {
       transition: all .33s;
       &:hover {
         background-color: $color-prussian-blue;
-        color: $color-white !important;
+        color: $color-white;
       }
     }
   }
