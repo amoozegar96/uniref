@@ -908,3 +908,20 @@ if ($('#demo').length){
     $('#demo').jQCloud(words);
 }
 
+
+//==================
+// ranking system
+//==================
+$(document).on("click",".ranking-system-attachment a,.ranking-system-attachment select",function(e){
+    var $this = $(this);
+    if($this.attr("href")){
+        $this.addClass("active").parents("li").siblings("li").find("a").removeClass("active");
+        $("[data-slider-raking-system="+ $this.attr("href").replace(/#/g, '')  +"]" ).addClass("active").siblings("[data-slider-raking-system]").removeClass("active");
+        $("[data-target="+ $this.attr("href").replace(/#/g, '')  +"]" ).attr("selected","selected").siblings().removeAttr("selected");
+    }else{
+        $this.parents(".ranking-system-attachment").find("[href='"+ "#"+$this.find("option:selected").attr("data-target") +"']" ).addClass("active").parents("li").siblings("li").find("a").removeClass("active");
+        $("[data-slider-raking-system="+ $this.find("option:selected").attr("data-target").replace(/#/g, '')  +"]" ).addClass("active").siblings("[data-slider-raking-system]").removeClass("active")
+    }
+    e.stopPropagation();
+   e.preventDefault();
+});
