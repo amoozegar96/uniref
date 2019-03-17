@@ -1,0 +1,56 @@
+.list-of-professors{
+  .list-of-professors-main{
+    ul{
+      margin: 0 -15px;
+      @include media-query("(max-width:575px)") {
+        margin: 0 0;
+      }
+     .list-of-professors-main-item{
+       @include media-query("(min-width:1200px)") {
+         flex: 0 0 20%;
+         max-width: 20%;
+       }
+       > div{
+         height: 100%;
+         border: 2px solid $color-galler-2;
+         .list-of-professors-main-item-image{
+           width: 96px;
+           height: 96px;
+           padding: 2px;
+           border-radius: 50%;
+           box-shadow: 0 0 0 2px $color-silver-3;
+           .list-of-professors-main-item-image-default{
+             border-radius: 50%;
+           }
+         }
+
+         .list-of-professors-main-item-title{
+           *{
+             display: block;
+           }
+         }
+         .list-of-professors-main-item-sub-title{
+           *{
+             cursor: default;
+             line-height: 1.8;
+           }
+         }
+         .social-network{
+           a{
+             margin: 0 4px 5px 4px;
+             display: flex;
+             &::before{
+               font-size: $f-12;
+             }
+           }
+         }
+         .btn.btn-transparent{
+           color: $color-emperor;
+           border: 1px solid $color-alto-3;
+           border-radius: 15px;
+         }
+       }
+     }
+    }
+  }
+}
