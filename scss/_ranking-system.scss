@@ -42,6 +42,10 @@
     .scrollbar-inner{
       max-height: 780px;
       min-height: 780px;
+      @include media-query("(max-width:767px)"){
+        max-height: initial !important;
+        min-height: inherit;
+      }
     }
     > .scrollbar-inner{
       box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
