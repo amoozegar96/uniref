@@ -145,7 +145,7 @@ header {
 .rtl {
   header {
     .slogan {
-      margin-left: auto;
+      margin-left: 1rem;
       margin-right: 1rem;
     }
     .dropdown-menu {
@@ -165,6 +165,7 @@ header {
       li{
         &:last-child{
           margin-right:auto ;
+          margin-left: 0 !important;
         }
       }
     }
