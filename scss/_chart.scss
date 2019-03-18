@@ -4,6 +4,13 @@
   text-align: left;
   &#gauge-bands2 {
     height: 320px;
+    @include media-query("(max-width:991px)"){
+      position: relative;
+      left: -20px;
+    }
+    @include media-query("(max-width:575px)"){
+      height: 60vw;
+    }
   }
   a {
     display: none !important;
@@ -13,4 +20,7 @@
   tspan {
     font-size: 10px !important;
   }
+}
+[aria-labelledby]{
+  display: none;
 }

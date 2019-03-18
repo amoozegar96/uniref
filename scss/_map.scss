@@ -37,7 +37,7 @@
     }
     .province, .island, .province, .island {
       path {
-        &:hover {
+        &:hover,&.hover {
           fill: $color-regal-blue !important;
           cursor: pointer;
         }
@@ -67,7 +67,7 @@
       padding: 4px 8px 4px 0;
       border-radius: 6px;
       box-shadow: 1px 2px 2px 0 $color-alto-2;
-      &:hover, &:hover + span {
+      &:hover, &:hover + span ,&.hover, &.hover + span {
         background: $color-regal-blue;
         color: $color-cream-can;
       }

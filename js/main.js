@@ -853,17 +853,17 @@ $(document).on("click", ".landing-sidebar li a", function (e) {
 $(window).on('ready load resize orientationchange', function () {
     var $this_size = $(this);
 
-    if($this_size.width() >= 992){
+    if ($this_size.width() >= 992) {
         $(window).scroll(function () {
             var $this_scroll = $(this);
             $(".landing-item").each(function () {
-                if($(this).find(".title-landing-item").length){
-                    if($this_scroll.scrollTop() >= $(this).offset().top - ($(this).parents("body").find(".header .slogan").height() + $(this).parents("body").find(".header .bottom-header").height() + 30) && $this_scroll.scrollTop() <=  $(this).offset().top + $(this).height()){
-                        $("[href='#"+$(this).attr("id")+"']").addClass("active").parents("li").siblings("li").find(".active").removeClass("active");
+                if ($(this).find(".title-landing-item").length) {
+                    if ($this_scroll.scrollTop() >= $(this).offset().top - ($(this).parents("body").find(".header .slogan").height() + $(this).parents("body").find(".header .bottom-header").height() + 30) && $this_scroll.scrollTop() <= $(this).offset().top + $(this).height()) {
+                        $("[href='#" + $(this).attr("id") + "']").addClass("active").parents("li").siblings("li").find(".active").removeClass("active");
                     }
-                }else{
-                    if($this_scroll.scrollTop() >= $(this).offset().top - ($(this).parents("body").find(".header .slogan").height() + $(this).parents("body").find(".header .bottom-header").height()) && $this_scroll.scrollTop() <=  $(this).offset().top + $(this).height() ){
-                        $("[href='#"+$(this).attr("id")+"']").addClass("active").parents("li").siblings("li").find(".active").removeClass("active");
+                } else {
+                    if ($this_scroll.scrollTop() >= $(this).offset().top - ($(this).parents("body").find(".header .slogan").height() + $(this).parents("body").find(".header .bottom-header").height()) && $this_scroll.scrollTop() <= $(this).offset().top + $(this).height()) {
+                        $("[href='#" + $(this).attr("id") + "']").addClass("active").parents("li").siblings("li").find(".active").removeClass("active");
                     }
                 }
             });
@@ -872,7 +872,7 @@ $(window).on('ready load resize orientationchange', function () {
 });
 
 
-if ($('#demo').length){
+if ($('#demo').length) {
 
 
     var words = [
@@ -912,16 +912,30 @@ if ($('#demo').length){
 //==================
 // ranking system
 //==================
-$(document).on("click",".ranking-system-attachment a,.ranking-system-attachment select",function(e){
+
+$(document).on("click", ".ranking-system-attachment a,.ranking-system-attachment select", function (e) {
     var $this = $(this);
-    if($this.attr("href")){
+    if ($this.attr("href")) {
         $this.addClass("active").parents("li").siblings("li").find("a").removeClass("active");
-        $("[data-slider-raking-system="+ $this.attr("href").replace(/#/g, '')  +"]" ).addClass("active").siblings("[data-slider-raking-system]").removeClass("active");
-        $("[data-target="+ $this.attr("href").replace(/#/g, '')  +"]" ).attr("selected","selected").siblings().removeAttr("selected");
-    }else{
-        $this.parents(".ranking-system-attachment").find("[href='"+ "#"+$this.find("option:selected").attr("data-target") +"']" ).addClass("active").parents("li").siblings("li").find("a").removeClass("active");
-        $("[data-slider-raking-system="+ $this.find("option:selected").attr("data-target").replace(/#/g, '')  +"]" ).addClass("active").siblings("[data-slider-raking-system]").removeClass("active")
+        $("[data-slider-raking-system=" + $this.attr("href").replace(/#/g, '') + "]").addClass("active").siblings("[data-slider-raking-system]").removeClass("active");
+        $("[data-target=" + $this.attr("href").replace(/#/g, '') + "]").attr("selected", "selected").siblings().removeAttr("selected");
+    } else {
+        $this.parents(".ranking-system-attachment").find("[href='" + "#" + $this.find("option:selected").attr("data-target") + "']").addClass("active").parents("li").siblings("li").find("a").removeClass("active");
+        $("[data-slider-raking-system=" + $this.find("option:selected").attr("data-target").replace(/#/g, '') + "]").addClass("active").siblings("[data-slider-raking-system]").removeClass("active")
     }
     e.stopPropagation();
-   e.preventDefault();
+    e.preventDefault();
+});
+//==================
+// niceScroll touch
+//==================
+
+$(window).on('ready load resize change', function () {
+    if ($(".list-articles").length) {
+        $(".list-articles").niceScroll({
+            cursorwidth: "23px",
+            touchbehavior: true,
+            rtlmode: "auto"
+        });
+    }
 });
