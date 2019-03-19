@@ -1,10 +1,23 @@
 header {
-  height: 157px;
+  height: 210px;
+  .black-header{
+    .social-network{
+      margin-left: auto;
+      a{
+        margin-right: 18px;
+        &:before{
+          font-size: 13px;
+        }
+      }
+    }
+  }
   .top-header {
     background-color: $color-Gainsboro;
-    img {
-      position: relative;
-      top: 10px;
+    .logo{
+      > img {
+        position: relative;
+        top: 10px;
+      }
     }
     .slogan {
       font-size: 14px;
@@ -79,7 +92,7 @@ header {
     width: 100% !important;
     position: fixed !important;
     right: 0 !important;
-    top: -90px !important;
+    top: -116px !important;
     z-index: 999;
     background-position: center;
     background-repeat-y: no-repeat;
@@ -145,6 +158,10 @@ header {
 
 .rtl {
   header {
+    .social-network{
+      margin-right: auto;
+      margin-left: 0;
+    }
     .slogan {
       margin-left: 1rem;
       margin-right: 1rem;

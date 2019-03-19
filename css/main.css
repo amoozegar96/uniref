@@ -496,10 +496,16 @@ ul li {
   background-color: transparent; }
 
 header {
-  height: 157px; }
+  height: 210px; }
+  header .black-header .social-network {
+    margin-left: auto; }
+    header .black-header .social-network a {
+      margin-right: 18px; }
+      header .black-header .social-network a:before {
+        font-size: 13px; }
   header .top-header {
     background-color: #e3e3e3; }
-    header .top-header img {
+    header .top-header .logo > img {
       position: relative;
       top: 10px; }
     header .top-header .slogan {
@@ -550,7 +556,7 @@ header {
     width: 100% !important;
     position: fixed !important;
     right: 0 !important;
-    top: -90px !important;
+    top: -116px !important;
     z-index: 999;
     background-position: center;
     background-repeat-y: no-repeat; }
@@ -600,6 +606,9 @@ header {
             font-size: 14px;
             margin-bottom: 5px; } }
 
+.rtl header .social-network {
+  margin-right: auto;
+  margin-left: 0; }
 .rtl header .slogan {
   margin-left: 1rem;
   margin-right: 1rem; }
@@ -1319,7 +1328,7 @@ g g text {
       stroke: #f4f4f4; }
     .iran-map .map .sea path, .iran-map .map .lake path {
       fill: #01396e; }
-    .iran-map .map .province path:hover, .iran-map .map .island path:hover, .iran-map .map .province path:hover, .iran-map .map .island path:hover {
+    .iran-map .map .province path:hover, .iran-map .map .province path.hover, .iran-map .map .island path:hover, .iran-map .map .island path.hover, .iran-map .map .province path:hover, .iran-map .map .province path.hover, .iran-map .map .island path:hover, .iran-map .map .island path.hover {
       fill: #01396e !important;
       cursor: pointer; }
   .iran-map .list li {
@@ -1341,7 +1350,7 @@ g g text {
     padding: 4px 8px 4px 0;
     border-radius: 6px;
     box-shadow: 1px 2px 2px 0 #d9d9d9; }
-    .iran-map .list a:hover, .iran-map .list a:hover + span {
+    .iran-map .list a:hover, .iran-map .list a:hover + span, .iran-map .list a.hover, .iran-map .list a.hover + span {
       background: #01396e;
       color: #f2bb4e; }
   .iran-map .list span {
@@ -1364,11 +1373,21 @@ g g text {
   text-align: left; }
   .gauge-bands#gauge-bands2 {
     height: 320px; }
+    @media only screen and (max-width: 991px) {
+      .gauge-bands#gauge-bands2 {
+        position: relative;
+        left: -20px; } }
+    @media only screen and (max-width: 575px) {
+      .gauge-bands#gauge-bands2 {
+        height: 60vw; } }
   .gauge-bands a {
     display: none !important; }
 
 .science-production tspan {
   font-size: 10px !important; }
+
+[aria-labelledby] {
+  display: none; }
 
 footer {
   background: #10698a url("../images/footer-background.png") fixed center no-repeat;

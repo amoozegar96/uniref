@@ -933,7 +933,7 @@ $(document).on("click", ".ranking-system-attachment a,.ranking-system-attachment
 $(window).on('ready load resize change', function () {
     if ($(".list-articles").length) {
         $(".list-articles").niceScroll({
-            cursorwidth: "23px",
+            cursorwidth: "7px",
             touchbehavior: true,
             rtlmode: "auto"
         });
