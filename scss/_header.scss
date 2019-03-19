@@ -95,6 +95,7 @@ header {
     background-color: $color-Gainsboro;
     box-shadow: 0 0 12px -3px $color-prussian-blue;
     padding: 0 25px;
+    direction: rtl;
     .icon-search-small {
       left: 10px;
       height: 21px;
@@ -203,6 +204,9 @@ g {
       font-size: inherit;
       tspan {
         font-size: inherit;
+        @include media-query(LB) {
+          font-size: 10px;
+        }
       }
     }
   }

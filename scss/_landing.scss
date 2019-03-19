@@ -18,9 +18,9 @@
       min-width: 200px;
       margin: 0 16px;
 
-      @include media-query("(max-width:575px)"){
+      @include media-query("(max-width:575px)") {
         min-width: 160px;
-        span{
+        span {
           font-size: 12px;
         }
       }
@@ -67,9 +67,9 @@
               box-shadow: -2px 0px 20px -4px rgba(0, 0, 0, 0.50);
             }
           }
-          &:not(.landing-small-profile){
-            .landing-profile-content{
-              .landing-profile-content-title{
+          &:not(.landing-small-profile) {
+            .landing-profile-content {
+              .landing-profile-content-title {
                 @include media-query("(max-width:767px)") {
                   font-size: $f-10;
                 }
@@ -81,25 +81,25 @@
               width: 32px;
               height: 32px;
               box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
-              @include media-query("(max-width:575px)"){
+              @include media-query("(max-width:575px)") {
                 width: 35px;
                 height: 35px;
                 margin-bottom: 8px;
               }
             }
-            .landing-profile-content{
-              .landing-profile-content-title{
-                @include media-query("(max-width:575px)"){
+            .landing-profile-content {
+              .landing-profile-content-title {
+                @include media-query("(max-width:575px)") {
                   text-align: center !important;
                 }
               }
-              .landing-profile-content-sub-title{
+              .landing-profile-content-sub-title {
                 @include media-query("(max-width:991px)") {
                   line-height: 1.2;
                   display: block;
                   margin-top: 4px;
                 }
-                @include media-query("(max-width:575px)"){
+                @include media-query("(max-width:575px)") {
                   text-align: center;
                 }
               }
@@ -135,13 +135,13 @@
               margin-bottom: 28px;
             }
           }
-            > div:not(.scroll-wrapper) {
-              min-height: 100%;
-              height: 100%;
-              background-color: $color-silver-chalice;
-              border-radius: 6px;
-              overflow: hidden;
-            }
+          > div:not(.scroll-wrapper) {
+            min-height: 100%;
+            height: 100%;
+            background-color: $color-silver-chalice;
+            border-radius: 6px;
+            overflow: hidden;
+          }
           .book-item-hover {
             visibility: hidden;
             opacity: 0;
@@ -152,17 +152,17 @@
             left: 0;
             h3 {
               line-height: 1.6;
-              @include media-query("(max-width:575px)"){
+              @include media-query("(max-width:575px)") {
                 font-size: 8px;
               }
             }
-            .btn.btn-transparent{
+            .btn.btn-transparent {
               padding: 2px 5px;
               font-size: 10px;
             }
           }
           & img:hover {
-            &+ .book-item-hover {
+            & + .book-item-hover {
               visibility: visible;
               opacity: 1;
             }
@@ -233,7 +233,7 @@
       &.variable-radius-pie-chart {
         @include media-query("(max-width:767px)") {
           height: 37vw;
-          tspan{
+          tspan {
             font-size: 8px;
           }
           [aria-labelledby] {
@@ -245,11 +245,11 @@
         height: 300px;
         @include media-query("(max-width:767px)") {
           height: 64vw;
-          text{
+          text {
             transform: rotate(25deg) !important;
           }
-          [role="tooltip"]{
-            text{
+          [role="tooltip"] {
+            text {
               transform: rotate(0) !important;
             }
           }
@@ -265,9 +265,9 @@
         height: 470px;
       }
     }
-    .landing-contact-us{
-      span{
-        @include media-query("(max-width:575px)"){
+    .landing-contact-us {
+      span {
+        @include media-query("(max-width:575px)") {
           font-size: $f-14;
         }
       }
@@ -281,7 +281,7 @@
       ul {
         box-shadow: 0 0 16px -3px rgba(0, 0, 0, 0.34);
         border-radius: 5px;
-        margin-left: 40px !important;
+        margin-right: 40px !important;
         li {
           a {
             &:before {
@@ -318,6 +318,17 @@
         position: relative;
         top: 0;
         left: 0;
+      }
+    }
+  }
+}
+
+.rtl {
+  .landing-sidebar-parent {
+    .landing-sidebar {
+      ul {
+        margin-left: 40px;
+        margin-right: auto !important;
       }
     }
   }

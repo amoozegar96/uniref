@@ -184,7 +184,7 @@
             <div class="at-a-glance position-relative">
                 <div class="at-a-glance-content position-relative">
                     <div class="container custom-container">
-                        <div class="row bg-white p-xl-3 p-lg-3">
+                        <div class="row bg-white p-1 p-xl-3 p-lg-3">
                             <div class="at-a-glance-content-header position-relative w-100 d-xl-flex d-lg-flex align-items-start flex-wrap flex-md-nowrap">
                                 <div class="at-a-glance-content-header-text px-3 px-lg-5 py-3 col-xl-6 col-lg-6 col-md-12 col-sm-12 py-5">
                                     <h1 class="font-weight-bold at-a-glance-content-header-title color-mine-shaft-3 mb-3">
@@ -210,7 +210,7 @@
                                            class="icon-font-hint d-flex"></a>
                                     </div>
                                     <div class="row parents-statistics-box">
-                                        <div class="col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 p-0 d-flex mt-4 flex-wrap">
+                                        <div class="col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex mt-4 flex-wrap">
                                             <div class="statistics-box">
                                                 <div class="h-100 bg-persian-green-to-pine-green-gradient rounded d-flex flex-column align-items-center  justify-content-center">
                                                     <h6 class="font-weight-normal text-center color-white">طرح های
@@ -324,10 +324,10 @@
             </div>
             <div class="container custom-container">
                 <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 title d-flex align-items-start px-lg-0 px-sm-1 pt-3 pb-4 w-100 flex-column flex-md-row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 title d-flex align-items-start px-lg-0 px-sm-1 pt-3 pb-4 w-100 flex-column flex-md-row mt-4 mb-2">
                         <div class="d-flex flex-grow-1">
                             <h1 class="title-list-uni m-auto px-2 center">
-                                لیست مقالات
+                                رتبه بندی علمی
                             </h1>
                             <div class="line-after-title flex-2"></div>
                         </div>
@@ -336,10 +336,32 @@
                                 <h1 class="title-list-uni m-auto px-2 center font-size-12 color-dim-gray flex-1">مرتب سازی براساس :</h1>
                                 <div class="custom-select-parent position-relative flex-2">
                                     <select class="custom-select" required="">
-                                        <option value="" disabled>یک مقدار انتخاب کنید</option>
+                                        <option value="" disabled="">یک مقدار انتخاب کنید</option>
                                         <option value="1">تعداد مقالات داخلی</option>
                                         <option value="2">تعداد مقالات بین المللی</option>
                                         <option value="3">تعداد مقالات استان ها</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group custom-form-group d-flex px-2 mb-0">
+                                <h1 class="title-list-uni m-auto px-2 center font-size-12 color-dim-gray flex-1">دانشگاه های : </h1>
+                                <div class="custom-select-parent position-relative flex-2">
+                                    <select class="custom-select" required="">
+                                        <option value="" disabled="">یک مقدار انتخاب کنید</option>
+                                        <option value="1">دولتی</option>
+                                        <option value="2">آزاد</option>
+                                        <option value="3">پیام نور</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group custom-form-group d-flex px-2 mb-0">
+                                <h1 class="title-list-uni m-auto px-2 center font-size-12 color-dim-gray flex-1">سال :  </h1>
+                                <div class="custom-select-parent position-relative flex-2">
+                                    <select class="custom-select" required="">
+                                        <option value="" disabled="">یک مقدار انتخاب کنید</option>
+                                        <option value="1">۱۳۹۷</option>
+                                        <option value="2">۱۳۹۶</option>
+                                        <option value="3">۱۳۹۵</option>
                                     </select>
                                 </div>
                             </div>
