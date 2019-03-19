@@ -939,3 +939,11 @@ $(window).on('ready load resize change', function () {
         });
     }
 });
+
+$(window).on("load", function () {
+   $(".nicescroll-rails").css({
+       "direction":"ltr"
+       }
+   )
+
+});
