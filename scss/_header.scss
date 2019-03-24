@@ -1,5 +1,5 @@
 header {
-  height: 210px;
+  height: 188px;
   .black-header{
     .social-network{
       margin-left: auto;
@@ -96,6 +96,9 @@ header {
     z-index: 999;
     background-position: center;
     background-repeat-y: no-repeat;
+    .Ad{
+      margin-bottom: 15px !important;
+    }
   }
   @include media-query(LB) {
     height: 60px;
