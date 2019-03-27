@@ -1,6 +1,7 @@
 header {
   height: 188px;
   .black-header{
+    background-color: #012e59;
     .social-network{
       margin-left: auto;
       a{
@@ -32,7 +33,7 @@ header {
       .nav-item.show .nav-link, .nav-link.active {
         background-color: transparent;
         border-color: transparent;
-        color: #fc9c12;
+        color: #fc9c12 !important;
       }
       .nav-item {
         &.position-absolute {
